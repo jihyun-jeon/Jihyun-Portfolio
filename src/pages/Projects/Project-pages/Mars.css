@@ -1,0 +1,22 @@
+._Mars .projectTitle {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.infoContainer {
+  /* border: 1px solid black; */
+  width: 100%;
+}
+
+.InfoUl {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 10% 90%;
+  margin-bottom: 10px;
+  line-height: 1.5rem;
+}
+
+.InfoUl .InfoTitle {
+  font-weight: bold;
+}

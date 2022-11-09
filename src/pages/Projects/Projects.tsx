@@ -15,7 +15,7 @@ function Projects() {
 
   return (
     <div className="_projects">
-      <h1 className="font-ll">Projects</h1>
+      <h1 className="font-ll">🚀 Projects</h1>
       <div className="itemContainer">
         <div className="item" data-value="mars" onClick={onClickProject}>
           <div className="itemBgContainer">
@@ -76,7 +76,7 @@ function Projects() {
           </div>
         </div>
       </div>
-      <h1 className="font-ll toyTitle">Toy Project</h1>
+      <h1 className="font-ll toyTitle">🧸 Toy Project</h1>
       <div className="itemContainer">
         <div className="item" data-value="instargram" onClick={onClickProject}>
           <div className="itemBgContainer">
