@@ -1,0 +1,25 @@
+:root {
+  --mainBgColor: #f9f2ed;
+  --mainBlue: #4d559f;
+  --mainOrange: #de5e3c;
+}
+
+.font-s {
+  font-size: 0.8rem;
+}
+
+.font-m {
+  font-size: 1rem;
+}
+
+.font-ml {
+  font-size: 1.2rem;
+}
+
+.font-l {
+  font-size: 1.3rem;
+}
+
+.font-xl {
+  font-size: 2rem;
+}

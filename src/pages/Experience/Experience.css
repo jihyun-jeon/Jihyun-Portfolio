@@ -1,0 +1,29 @@
+.experienceTitle {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+  color: var(--mainBlue);
+  font-weight: bolder;
+  margin-bottom: 30px;
+}
+
+._experience {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.footContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.foot {
+  color: var(--mainOrange);
+  transform: rotate(-15deg);
+}
+
+.rightFoot {
+  margin-left: 90px;
+  transform: rotate(15deg);
+}

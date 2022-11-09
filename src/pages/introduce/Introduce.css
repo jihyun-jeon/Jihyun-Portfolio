@@ -1,0 +1,45 @@
+._introduce .wrapper {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+._introduce .title {
+  margin-left: 155px;
+  margin-bottom: 50px;
+  color: var(--mainOrange);
+}
+
+._introduce strong {
+  color: var(--mainOrange);
+}
+
+.gridItemImg {
+  place-self: center end;
+}
+
+.gridItemText {
+  place-self: start start;
+  padding-left: 80px;
+  margin-top: 10px;
+  line-height: 1.5rem;
+}
+
+.contentTitle {
+  margin-bottom: 60px;
+}
+
+.skillTextBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50px;
+  margin: 0 auto;
+  line-height: 25px;
+  color: var(--mainBlue);
+  font-weight: bold;
+}
+
+.boldWord {
+  text-decoration: underline;
+  padding: 0 5px;
+}
