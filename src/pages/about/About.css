@@ -1,15 +1,15 @@
-._introduce .wrapper {
+.about .wrapper {
   display: grid;
   grid-template-columns: 40% 60%;
 }
 
-._introduce .title {
+.about .title {
   margin-left: 155px;
   margin-bottom: 50px;
   color: var(--mainOrange);
 }
 
-._introduce strong {
+.about strong {
   color: var(--mainOrange);
 }
 
@@ -26,20 +26,4 @@
 
 .contentTitle {
   margin-bottom: 60px;
-}
-
-.skillTextBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 50px;
-  margin: 0 auto;
-  line-height: 25px;
-  color: var(--mainBlue);
-  font-weight: bold;
-}
-
-.boldWord {
-  text-decoration: underline;
-  padding: 0 5px;
 }

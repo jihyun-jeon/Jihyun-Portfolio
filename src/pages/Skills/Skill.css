@@ -60,4 +60,21 @@
   color: white;
   line-height: 25px;
   border-radius: 10px;
+  min-width: 100px;
+}
+
+.skillTextBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50px;
+  margin: 0 auto;
+  line-height: 25px;
+  color: rgb(87, 85, 85);
+  font-weight: bold;
+}
+
+.boldWord {
+  padding: 0 5px;
+  color: var(--mainOrange);
 }

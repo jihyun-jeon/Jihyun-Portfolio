@@ -17,10 +17,10 @@ function Header() {
           </li>
           <li>
             <NavLink
-              to={"/introduce"}
+              to={"/about"}
               className={({ isActive }) => (isActive ? "menuUnder" : undefined)}
             >
-              Introduce
+              About
             </NavLink>
           </li>
           <li>

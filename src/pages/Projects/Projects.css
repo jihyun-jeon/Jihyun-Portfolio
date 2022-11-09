@@ -1,0 +1,101 @@
+._projects h1 {
+  color: var(--mainBlue);
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 180px;
+}
+.itemContainer {
+  padding: 0 180px;
+  display: grid;
+  /* height: 500px; */
+  margin-bottom: 30px;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.itemContainer .item {
+  border: 1px solid gray;
+  border-radius: 6px;
+  height: 264px;
+  display: grid;
+  grid-template-rows: 75% 25%;
+  /* background-color: rosybrown; */
+}
+
+.itemContainer .item:hover {
+  cursor: pointer;
+}
+
+.itemContainer .item img {
+  transition: transform 0.3s;
+}
+
+.itemContainer .item:hover img {
+  transform: scale(1.1);
+}
+
+.itemBgContainer {
+  height: 100%;
+  overflow: hidden;
+}
+
+.itemBgContainer img {
+  display: block;
+  width: 100%;
+  height: fit-content;
+}
+
+.ImgDescription {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding: 5px 10px;
+  /* background-color: rosybrown; */
+}
+
+.ImgDescription p {
+  display: flex;
+  align-items: center;
+}
+
+.ImgDescription .title {
+  font-weight: bold;
+  color: var(--mainBlue);
+}
+
+.ImgDescription span {
+  padding: 2px 6px;
+  /* background-color: rgb(182, 182, 241, 0.6); */
+
+  border-radius: 20px;
+  font-size: 14px;
+  margin-right: 3px;
+}
+
+.toyTitle {
+  padding-top: 30px;
+}
+
+/* react */
+.blue {
+  background-color: rgb(211, 229, 239);
+}
+
+/* 상태관리 */
+.rosybrown {
+  background-color: rgb(255, 226, 221);
+}
+
+/* 스타일링 */
+.violet {
+  background-color: rgb(234, 220, 241);
+}
+
+/* type */
+.green {
+  background-color: rgb(219, 244, 219);
+}
+
+/* 나머지 */
+.yellow {
+  background: rgb(253, 236, 200);
+}

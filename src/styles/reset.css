@@ -109,6 +109,8 @@ section {
 body {
   line-height: 1;
   height: fit-content;
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
 }
 ol,
 ul {

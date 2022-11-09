@@ -1,9 +1,9 @@
-import "./Introduce.css";
+import "./About.css";
 
-function Introduce() {
+function Abount() {
   return (
-    <div className="_introduce">
-      <h1 className="font-xl title">Introduce</h1>
+    <div className="about">
+      <h1 className="font-xl title">About me</h1>
 
       <div className="wrapper">
         <div className="gridItemImg">
@@ -54,4 +54,4 @@ function Introduce() {
   );
 }
 
-export default Introduce;
+export default Abount;

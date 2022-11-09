@@ -54,7 +54,7 @@ function Skills() {
           <div className="skillTextBox">
             <p>
               기본적인 마크업 작업이 가능하며 flex나 grid를 이용한
-              <span className="boldWord font-ml">반응형</span>
+              <span className="boldWord font-m">반응형</span>
               레이아웃을 구상할 수 있습니다.
             </p>
           </div>
@@ -68,7 +68,7 @@ function Skills() {
             </p>
             <p>
               앞으로 더 깊게 공부하여
-              <span className="boldWord font-ml">기본기가 단단한 개발자가</span>
+              <span className="boldWord font-m">기본기가 단단한 개발자가</span>
               되고자 합니다.
             </p>
           </div>
@@ -77,8 +77,8 @@ function Skills() {
         {skillText === "React" && (
           <div className="skillTextBox">
             <p>
-              <span className="boldWord font-ml">공통 컴포넌트</span>나
-              <span className="boldWord font-ml">hook</span>을 활용하여 반복되는
+              <span className="boldWord font-m">공통 컴포넌트</span>나
+              <span className="boldWord font-m">hook</span>을 활용하여 반복되는
               작업을 더 효율적으로 구상하려고 합니다.
             </p>
           </div>
@@ -89,8 +89,8 @@ function Skills() {
             <p>Redux를 활용한 상태관리의 기본 로직을 이해하고 있으며</p>
             <p>
               비동기 처리를 위해 Redux-toolkit의 내장 기능인
-              <span className="boldWord font-ml">createAsyncThunk</span>를
-              활용할 수 있습니다.
+              <span className="boldWord font-m">createAsyncThunk</span>를 활용할
+              수 있습니다.
             </p>
           </div>
         )}
