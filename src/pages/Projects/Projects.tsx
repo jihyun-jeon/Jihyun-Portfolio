@@ -24,11 +24,11 @@ function Projects() {
           <div className="ImgDescription">
             <p className="title">MARS 프로젝트</p>
             <p>
-              <span className="blue">React.js</span>
-              <span className="green">Typescript</span>
-              <span className="rosybrown">MobX</span>
-              <span className="violet">Tailwind</span>
-              <span className="yellow">Javascript</span>
+              <span className="blue label">React.js</span>
+              <span className="green label">Typescript</span>
+              <span className="rosybrown label">MobX</span>
+              <span className="violet label">Tailwind</span>
+              <span className="yellow label">Javascript</span>
             </p>
           </div>
         </div>
@@ -39,11 +39,11 @@ function Projects() {
           <div className="ImgDescription">
             <p className="title">Account Manage App</p>
             <p>
-              <span className="blue">React.js</span>
-              <span className="rosybrown">Redux-toolkit</span>
-              <span className="yellow">Axios</span>
-              <span className="violet">Tailwind</span>
-              <span className="violet">Ant design</span>
+              <span className="blue label">React.js</span>
+              <span className="rosybrown label">Redux-toolkit</span>
+              <span className="yellow label">Axios</span>
+              <span className="violet label">Tailwind</span>
+              <span className="violet label">Ant design</span>
             </p>
           </div>
         </div>
@@ -55,9 +55,9 @@ function Projects() {
           <div className="ImgDescription">
             <p className="title">Tamna BnB</p>
             <p>
-              <span className="blue">React.js</span>
-              <span className="violet">Styled-component</span>
-              <span className="yellow">HTML</span>
+              <span className="blue label">React.js</span>
+              <span className="violet label">Styled-component</span>
+              <span className="yellow label">HTML</span>
             </p>
           </div>
         </div>
@@ -69,9 +69,9 @@ function Projects() {
           <div className="ImgDescription">
             <p className="title">Threppa &nbsp;(신발 온라인 쇼핑몰)</p>
             <p>
-              <span className="blue">React.js</span>
-              <span className="violet">SCSS</span>
-              <span className="yellow">HTML</span>
+              <span className="blue label">React.js</span>
+              <span className="violet label">SCSS</span>
+              <span className="yellow label">HTML</span>
             </p>
           </div>
         </div>
@@ -85,10 +85,10 @@ function Projects() {
           <div className="ImgDescription">
             <p className="title">Instargram</p>
             <p>
-              <span className="blue">React.js</span>
-              <span className="yellow">Javascript</span>
-              <span className="green">CSS</span>
-              <span className="yellow">HTML</span>
+              <span className="blue label">React.js</span>
+              <span className="yellow label">Javascript</span>
+              <span className="green label">CSS</span>
+              <span className="yellow label">HTML</span>
             </p>
           </div>
         </div>

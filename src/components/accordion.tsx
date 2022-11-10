@@ -43,7 +43,6 @@ const Accordion = () => (
             <p className="dash"> - </p>
 
             <p>
-              {" "}
               <span className="hightligher">팀 컨벤션에 따른</span> 코드 구현과
               commit메세지를 작성하였습니다.
             </p>
@@ -66,7 +65,7 @@ const Accordion = () => (
             📍 사내 프로젝트 참여, 기획부터 개발까지
           </span>
           <p className="innerLine">
-            서비스를 이해하고{" "}
+            서비스를 이해하고
             <span className="hightligher">사용자가 원하는 가치</span>를 코드로
             구현해보았습니다.
           </p>

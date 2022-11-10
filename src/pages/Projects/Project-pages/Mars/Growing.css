@@ -1,0 +1,49 @@
+._growing {
+  width: 660px;
+  margin: 0 auto;
+}
+
+.circleWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-rows: 180px;
+  /* background-color: rosybrown; */
+}
+
+.circleWrapper ul {
+  /* border: 1px solid violet; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.circleWrapper li {
+  width: 100%;
+  height: 100%;
+  background-color: var(--mainBlue);
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5rem;
+}
+
+.circleWrapper li:hover {
+  cursor: pointer;
+}
+
+.circleContentWrapper {
+  min-height: 200px;
+  /* background-color: rebeccapurple; */
+}
+
+.circleContent {
+  border: 1px solid black;
+  padding: 15px;
+  margin-top: 30px;
+}

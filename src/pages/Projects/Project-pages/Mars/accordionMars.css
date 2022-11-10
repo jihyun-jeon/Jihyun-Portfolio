@@ -1,8 +1,3 @@
-.AccordionWrapper {
-  width: 660px;
-  margin: 0 auto;
-}
-
 .itemTitle {
   padding-left: 15px;
   display: flex;
@@ -89,6 +84,11 @@
   margin-bottom: 24px;
 }
 
+.contentLineDesc {
+  margin-bottom: 25px;
+  line-height: 1.4rem;
+}
+
 .contentTitle {
   font-weight: bold;
 }
@@ -106,13 +106,17 @@
   padding-right: 10px;
 }
 
-.hightligher {
-  color: var(--mainOrange);
-  font-size: 1rem;
-  font-weight: bold;
-}
-
 .innerLine a {
   text-decoration: underline;
   padding: 0 6px;
+}
+
+.underLine {
+  text-decoration: underline;
+  padding: 0 5px;
+}
+
+.components {
+  width: 100%;
+  margin-top: 10px;
 }

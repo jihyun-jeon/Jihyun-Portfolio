@@ -9,7 +9,7 @@ import About from "./pages/about/About";
 import Projects from "./pages/Projects/Projects";
 import Skills from "./pages/Skills/Skill";
 
-import Mars from "./pages/Projects/Project-pages/Mars";
+import Mars from "./pages/Projects/Project-pages/Mars/Mars";
 import AccountApp from "./pages/Projects/Project-pages/AccountApp";
 import AirbnbApp from "./pages/Projects/Project-pages/AirbnbApp";
 import Instargram from "./pages/Projects/Project-pages/Instargram";

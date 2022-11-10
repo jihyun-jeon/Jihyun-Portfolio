@@ -5,6 +5,7 @@
 
 .infoContainer {
   /* border: 1px solid black; */
+  margin: 50px 0;
   width: 100%;
 }
 
@@ -19,4 +20,24 @@
 
 .InfoUl .InfoTitle {
   font-weight: bold;
+}
+
+._Mars .bold {
+  color: var(--mainOrange);
+  padding: 0 6px;
+}
+
+.projectContent {
+  margin-top: 100px;
+}
+
+.contentItem {
+  width: 660px;
+  margin: 0 auto;
+}
+
+.contentItem h1 {
+  padding: 30px 0;
+  font-weight: bold;
+  font-size: 20px;
 }
