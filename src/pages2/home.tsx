@@ -1,64 +1,86 @@
+import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { Suspense } from "react";
-import Scene from "../3d/Scene";
+import { Link } from "react-router-dom";
+// import Scene from "../3d/Scene";
+
+const Scene = React.lazy(() => import("../3d/Scene"));
 
 function Home() {
   return (
     <>
       <Header>
-        <div tw="absolute z-10 inset-0">
-          <div tw="max-w-6xl mx-auto">
-            <nav>
-              <ul className="menu">
-                <li>HOME</li>
-                <li>ABOUT</li>
-                <li>SKILL</li>
-                <li>EXPERIENCE</li>
-                <li>PROJECTS</li>
-              </ul>
-            </nav>
-          </div>
-          <section tw="mt-[45vh] flex items-center max-w-6xl mx-auto">
-            <h1 tw="font-bold text-6xl leading-relaxed">
+        <nav tw="mx-auto max-w-6xl flex justify-between">
+          <ul className="menu">
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>SKILL</li>
+            <li>EXPERIENCE</li>
+            <li>PROJECTS</li>
+          </ul>
+          <ul className="menu">
+            <li>
+              <a href="https://velog.io/@jhplus13/series" target="_black">
+                blog
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/jihyun-jeon" target="_black">
+                github
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <section tw="h-[50vh]">
+          <Suspense
+            fallback={
+              <h1 tw="w-10 h-2/3 bg-slate-600">Lazy... Lazy... Lazy...</h1>
+            }
+          >
+            <Scene />
+          </Suspense>
+        </section>
+        <section tw="mx-auto max-w-6xl flex items-center h-[40vh]">
+          <h1 tw="font-bold text-6xl leading-relaxed">
+            <div>
               <div>
-                <div>
-                  안녕하세요!
-                  <br /> 프론트엔드 개발자{" "}
-                  <span tw="text-orange-400">전지현</span>
-                  입니다. 🎉
-                </div>
-                <div tw="text-orange-400">
-                  <TypeAnimation
-                    sequence={[
-                      "책임감의 아이콘",
-                      3000,
-                      "기본기가 탄탄해요",
-                      3000,
-                      "울보에요 🥲",
-                      3000,
-                    ]}
-                    wrapper="span"
-                    repeat={Infinity}
-                    cursor={true}
-                  />
-                </div>
+                안녕하세요!
+                <br /> 프론트엔드 개발자
+                <span tw="text-orange-400 px-3">전지현</span>
+                입니다. 🎉
               </div>
-            </h1>
-          </section>
-        </div>
-        <Suspense fallback={null}>
-          <Scene />
-        </Suspense>
+              <div tw="text-orange-400">
+                <TypeAnimation
+                  sequence={[
+                    "기본기가 탄탄해요 💪",
+                    1000,
+                    "꼼꼼해요 🧐",
+                    1000,
+                    "능동적이에요 🏃🏻‍♀️",
+                    1000,
+                  ]}
+                  wrapper="span"
+                  repeat={Infinity}
+                  cursor={true}
+                />
+              </div>
+            </div>
+          </h1>
+        </section>
+        {/* </div> */}
       </Header>
+      <main tw="mx-auto max-w-6xl bg-slate-400">
+        <h1>내용</h1>
+      </main>
     </>
   );
 }
 
 const Header = styled.header`
   .menu {
-    ${tw`flex content-center h-[10vh]`}
+    ${tw`flex content-between items-center  h-[10vh]`}
 
     li {
       ${tw`font-bold text-xl flex m-4`}

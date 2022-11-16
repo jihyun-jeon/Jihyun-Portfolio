@@ -4,7 +4,7 @@ import Laptop from "./Laptop";
 
 function Scene() {
   return (
-    <div tw="w-screen h-[50vh]">
+    <div tw="w-full h-[50vh]">
       <Canvas
         shadows
         gl={{ antialias: true, preserveDrawingBuffer: true }}
