@@ -1,0 +1,143 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import tw from "twin.macro";
+import styled from "styled-components";
+
+function Projects() {
+  const navigate = useNavigate();
+
+  const onClickProject = (e: React.MouseEvent<HTMLDivElement>) => {
+    const value = (e.currentTarget as HTMLDivElement).dataset.value;
+
+    if (value) {
+      navigate(value);
+    }
+  };
+
+  return (
+    <div>
+      <div tw="px-36 grid mt-12 gap-7 gap-y-[40px] grid-cols-[1fr_minmax(350px,_1fr)]">
+        <Card data-value="mars" onClick={onClickProject}>
+          <div tw="h-full overflow-hidden">
+            <img src="/imgs/musmaBg.png" />
+          </div>
+          <div tw="py-1 px-2">
+            <p tw="font-bold text-mainBlue pb-2">MARS</p>
+            <p>
+              <span className="blue label">React.js</span>
+              <span className="green label">Typescript</span>
+              <span className="rosybrown label">MobX</span>
+              <span className="violet label">Tailwind</span>
+              <span className="yellow label">Javascript</span>
+            </p>
+          </div>
+        </Card>
+        <Card data-value="account" onClick={onClickProject}>
+          <div tw="h-full overflow-hidden">
+            <img src="/imgs/accountBg.png" />
+          </div>
+          <div tw="py-1 px-2">
+            <p tw="font-bold text-mainBlue pb-2">Account Manage App</p>
+            <p>
+              <span className="blue label">React.js</span>
+              <span className="rosybrown label">Redux-toolkit</span>
+              <span className="yellow label">Axios</span>
+              <span className="violet label">Tailwind</span>
+              <span className="violet label">Antd</span>
+            </p>
+          </div>
+        </Card>
+
+        <Card data-value="airbnb" onClick={onClickProject}>
+          <div tw="h-full overflow-hidden">
+            <img src="/imgs/airbnbBg.png" />
+          </div>
+          <div tw="py-1 px-2">
+            <p tw="font-bold text-mainBlue pb-2">Tamna BnB</p>
+            <p>
+              <span className="blue label">React.js</span>
+              <span className="violet label">Styled-component</span>
+              <span className="yellow label">HTML</span>
+            </p>
+          </div>
+        </Card>
+
+        <Card data-value="threppa" onClick={onClickProject}>
+          <div tw="h-full overflow-hidden">
+            <img src="/imgs/threppaBg.png" />
+          </div>
+          <div tw="py-1 px-2">
+            <p tw="font-bold text-mainBlue pb-2">
+              Threppa &nbsp;(신발 온라인 쇼핑몰)
+            </p>
+            <p>
+              <span className="blue label">React.js</span>
+              <span className="violet label">SCSS</span>
+              <span className="yellow label">HTML</span>
+            </p>
+          </div>
+        </Card>
+      </div>
+      {/* <h1 className="font-ll toyTitle">🧸 Toy Project</h1>
+      <div className="itemContainer">
+        <div className="item" data-value="instargram" onClick={onClickProject}>
+          <div className="itemBgContainer">
+            <img src="/imgs/instargramBg.gif" />
+          </div>
+          <div className="ImgDescription">
+            <p className="title">Instargram</p>
+            <p>
+              <span className="blue label">React.js</span>
+              <span className="yellow label">Javascript</span>
+              <span className="green label">CSS</span>
+              <span className="yellow label">HTML</span>
+            </p>
+          </div>
+        </div>
+        <div className="item">s</div>
+      </div> */}
+    </div>
+  );
+}
+
+export default Projects;
+
+const Card = styled.div`
+  ${tw`border-2 border-solid border-neutral-200 rounded-md h-72 grid grid-rows-[75%_25%] bg-gray-100`}
+
+  &:hover {
+    ${tw`cursor-pointer`}
+
+    img {
+      ${tw`scale-110`}
+    }
+  }
+
+  img {
+    ${tw`transform duration-300`}
+  }
+
+  span {
+    ${tw`px-[6px] py-[2px] rounded-2xl text-sm mr-1`}
+
+    &.blue {
+      background-color: rgb(211, 229, 239);
+    }
+
+    &.green {
+      background-color: rgb(219, 244, 219);
+    }
+
+    &.rosybrown {
+      background-color: rgb(255, 226, 221);
+    }
+
+    &.violet {
+      background-color: rgb(234, 220, 241);
+    }
+
+    &.yellow {
+      background: rgb(253, 236, 200);
+    }
+  }
+`;

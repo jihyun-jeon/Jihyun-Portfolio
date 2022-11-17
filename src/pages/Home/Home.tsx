@@ -7,6 +7,7 @@ import { Suspense } from "react";
 import { Link } from "react-router-dom";
 import Nav from "../../components/Nav";
 import About from "../About";
+import Projects from "../Projects/Projects";
 // import Scene from "../3d/Scene";
 
 const Scene = React.lazy(() => import("../../3d/Scene"));
@@ -56,11 +57,12 @@ function Home() {
       <main tw="mx-auto max-w-6xl">
         <div tw="h-32" />
         <About />
-        <div tw="h-32" />
+        {/* <div tw="h-32" /> */}
         {/* Projects */}
-        <section tw="h-screen bg-yellow-200">
-          <h1 tw="pt-36 text-center text-3xl font-bold ">Projects</h1>
-          <div tw="mt-20  flex"></div>
+        <div tw="h-32" />
+        <section tw="h-screen ">
+          <h1 tw="pt-36 text-center text-3xl font-bold">Projects</h1>
+          <Projects />
         </section>
       </main>
     </>
