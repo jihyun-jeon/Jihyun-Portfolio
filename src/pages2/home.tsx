@@ -58,7 +58,7 @@ function Home() {
                     1000,
                     "꼼꼼해요 🧐",
                     1000,
-                    "능동적이에요 🏃🏻‍♀️",
+                    "능동적이에요 🏃",
                     1000,
                   ]}
                   wrapper="span"
@@ -69,10 +69,27 @@ function Home() {
             </div>
           </h1>
         </section>
-        {/* </div> */}
       </Header>
-      <main tw="mx-auto max-w-6xl bg-slate-400">
-        <h1>내용</h1>
+      <main tw="mx-auto max-w-6xl">
+        {/* 공백 */}
+        <div tw="h-36 bg-slate-100" />
+        {/* About me */}
+        <section>
+          <h1 tw="text-center text-3xl font-bold ">ABOUT ME</h1>
+          <div tw="mt-11 mb-11 bg-red-300">
+            <div tw="mr-7 w-1/3">
+              <img src="/imgs/jihyunImg.png" />
+            </div>
+            <div>
+              <p></p>
+              <p></p>
+              <p></p>
+              {/* <ul>
+                <li></li>
+              </ul> */}
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );
