@@ -15,7 +15,10 @@ const About = () => {
     <section tw="h-screen">
       <h1 tw="pt-36 text-center text-3xl font-bold ">ABOUT ME</h1>
       <div tw="mt-20  flex">
-        <MyImg src="/imgs/jihyunImg.png" className={isVisible ? "show" : ""} />
+        <MyImg
+          className={isVisible ? "show" : ""}
+          tw="bg-[url('/imgs/jihyunImg.png')] bg-contain bg-[center_top_-4rem] bg-no-repeat"
+        />
         <AboutText className={isVisible ? "show" : ""}>
           <h1 ref={ref}>
             저는 <span>기본기가 탄탄한</span> 프론트엔드 개발자
@@ -53,8 +56,8 @@ const About = () => {
 
 export default About;
 
-const MyImg = styled.img`
-  ${tw`mr-7 w-1/3 -translate-x-32 opacity-0 transition-all delay-500 duration-500`}
+const MyImg = styled.div`
+  ${tw`w-1/3 -translate-x-32 opacity-0 transition-all delay-300 duration-500`}
 
   &.show {
     ${tw`translate-x-0 opacity-100`}
