@@ -33,30 +33,30 @@
 }
 
 .accordion-title {
-  font-weight: 600;
+  /* font-weight: 600;
   cursor: pointer;
   color: #666;
   padding: 0.7em 1.5em;
   border: solid 1px gray;
-  border-radius: 1em;
-  display: flex;
+  border-radius: 1em; */
+  /* display: flex; */
   /* justify-content: space-between; */
-  align-items: center;
-  background-color: var(--mainBgColor);
+  /* align-items: center; */
+  /* background-color: var(--mainBgColor); */
 }
 
-.accordion-title:hover,
+/* .accordion-title:hover,
 .accordion-title.open {
   color: var(--mainBlue);
   font-weight: bold;
-}
+} */
 
-.accordion-title:hover .period,
+/* .accordion-title:hover .period,
 .accordion-title.open .period {
   color: var(--mainBlue);
   font-weight: bold;
   font-size: 14px;
-}
+} */
 
 /* 화살표 */
 .accordion-title::before {
