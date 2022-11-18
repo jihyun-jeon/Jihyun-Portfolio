@@ -21,7 +21,7 @@
 }
 
 .accordionItem {
-  /* background-color: rosybrown; */
+  background-color: rosybrown;
   overflow: hidden;
   transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
   height: auto;

@@ -11,6 +11,10 @@ module.exports = {
       backgroundColor: {
         blueLabel: "px-[6px] py-[2px] rounded-2xl text-sm mr-1 bg-rose-400",
       },
+      transitionTimingFunction: {
+        "in-expo": " cubic-bezier(1, 0, 1, 0)",
+        "out-expo": " cubic-bezier(0, 1, 0, 1)",
+      },
     },
   },
   plugins: [],
