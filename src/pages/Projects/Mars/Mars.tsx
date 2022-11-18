@@ -4,38 +4,47 @@ import styled from "styled-components";
 import { Label } from "../../../components/Label";
 import Carousel from "../../../components/Carousel";
 import Accordion from "../../../components/Accordion";
-
-const CarouselData = [
-  { title: "home 대쉬보드", url: "https://www.youtube.com/embed/sI7kB4cCKz0" },
-  {
-    title: "장비 디테일 페이지",
-    url: "https://www.youtube.com/embed/qcmL_gua0Y0",
-  },
-  {
-    title: "디바이스 디테일 페이지",
-    url: "https://www.youtube.com/embed/_-b6ophYQ9s",
-  },
-];
+import LinkIcon from "../../../components/LinkIcon";
+import Growing from "./Growing";
 
 const Mars = () => {
   return (
     <div tw="max-w-3xl mx-auto">
-      <h1 tw="font-bold mb-5 text-3xl">Mars 프로젝트</h1>
+      <h1 tw="w-full font-bold mb-5 text-3xl flex justify-between">
+        Mars 프로젝트
+      </h1>
       <div tw="my-12">
         <InfoList>
-          <li className="InfoTitle">서비스 소개</li>
-          <li>
-            이 서비스는 <span className="underLine">공사현장 관리자</span>를
-            위한
-            <span className="bold underLine">실시간 장비 모니터링 시스템</span>
-            이며,
-            <br />
-            (주)무스마 내에서 실제 고객사에게 자사 제품 소개시 사용될 샘플
-            시안을 만든 것 입니다.
+          <li tw="font-bold mb-3">링크</li>
+          <li tw="flex">
+            <LinkIcon
+              txt="git"
+              url="https://github.com/jihyun-jeon/Mars-monitoring-system"
+            />
+
+            <LinkIcon
+              txt="개발노트"
+              url="https://velog.io/@jhplus13/MARS-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Management-Automated-Reporting-System"
+            />
           </li>
         </InfoList>
         <InfoList>
-          <li className="InfoTitle">사용 스택</li>
+          <li tw="font-bold mb-8">서비스 소개</li>
+          <li>
+            이 서비스는 공사현장 관리자를 위한
+            <span tw="font-semibold pl-1 text-mainOrange">
+              실시간 장비 모니터링 시스템
+            </span>
+            이며,
+            <br />
+            <span tw="font-semibold pl-1 text-mainOrange">
+              기획부터 앱 제작까지
+            </span>
+            모두 주도적으로 담당하였습니다.
+          </li>
+        </InfoList>
+        <InfoList>
+          <li tw="font-bold mb-2">사용 스택</li>
           <li>
             <Label txt="React.js" color="blue" />
             <Label txt="Typescript" color="green" />
@@ -45,11 +54,11 @@ const Mars = () => {
           </li>
         </InfoList>
         <InfoList>
-          <li className="InfoTitle">기간</li>
+          <li tw="font-bold mb-2">기간</li>
           <li>2022. 07. 18 ~ 2022. 08. 11 (4주)</li>
         </InfoList>
         <InfoList>
-          <li className="InfoTitle">팀 구성</li>
+          <li tw="font-bold mb-2">팀 구성</li>
           <li>프론트엔드 2명, 백엔드 2명</li>
         </InfoList>
       </div>
@@ -101,17 +110,33 @@ const Mars = () => {
             </div>
           </Accordion>
           <Accordion CarouselTitle={"2. Context API를 이용한 Toast 메시지"}>
-            <h2>children2</h2>
+            <div tw="mb-6">
+              Context API를 이용하여 toast 메시지를 전역으로 두어, 다른 팀원이
+              구현하는 페이지에서도 같이 사용할 수 있도록 하였습니다.
+            </div>
           </Accordion>
           <Accordion CarouselTitle={"3. 재사용 가능한 컴포넌트 구상"}>
-            <h3>children3</h3>
+            <div tw="mb-6">
+              <div>
+                반복되는 input box와 select box를 공통 컴포넌트로 분리하여
+                재사용하였습니다. <br />
+                <br />
+                또한 요소마다 조금씩 다른 style 처리를 해야 하는 경우가
+                있었는데, 이는 props로 독립적인 style 값을 주어 해결하였습니다.
+                <br />
+                <br />이 결과 한 컴포넌트를 사용해도 상황에 맞는 별도의 UI를
+                그릴 수 있었습니다.
+              </div>
+              <img src="/imgs/components.png" tw="w-full h-96 mt-2" />
+            </div>
           </Accordion>
         </div>
-        {/*   
-        <div className="contentItem">
-          <h1>성장 포인트</h1>
+
+        <div tw="max-w-[660px] mx-auto my-10">
+          <h1 tw="py-8 text-xl font-bold">성장 포인트</h1>
+
           <Growing />
-        </div>*/}
+        </div>
       </div>
     </div>
   );
@@ -134,3 +159,15 @@ const InfoList = styled.ul`
     ${tw`underline`}
   }
 `;
+
+const CarouselData = [
+  { title: "home 대쉬보드", url: "https://www.youtube.com/embed/sI7kB4cCKz0" },
+  {
+    title: "장비 디테일 페이지",
+    url: "https://www.youtube.com/embed/qcmL_gua0Y0",
+  },
+  {
+    title: "디바이스 디테일 페이지",
+    url: "https://www.youtube.com/embed/_-b6ophYQ9s",
+  },
+];

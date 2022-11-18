@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 import "./Growing.css";
 
 const Growing = () => {
@@ -24,7 +25,7 @@ const Growing = () => {
 
         <button type="button" value="3" onClick={onClickCircle}>
           <p>에러 해결기</p>
-          <p>(비동기 처리의 순서 보장)</p>
+          <p>(비동기 처리 순서 보장)</p>
         </button>
       </div>
 
