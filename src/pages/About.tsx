@@ -86,7 +86,7 @@ const AboutText = styled.div`
   .tmi {
     ${tw`pt-10`}
     u {
-      ${tw`mr-1 px-2 bg-sky-100 rounded-lg`}
+      ${tw`ml-1 px-2 bg-gray-300 rounded-lg`}
     }
   }
 `;

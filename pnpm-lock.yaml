@@ -22,6 +22,7 @@ specifiers:
   react: ^18.2.0
   react-dom: ^18.2.0
   react-icons: ^4.6.0
+  react-intersection-observer-hook: ^2.0.6
   react-router-dom: ^6.4.3
   react-slick: ^0.29.0
   react-type-animation: ^2.1.2
@@ -31,6 +32,9 @@ specifiers:
   twin.macro: ^3.0.0
   typescript: ^4.6.4
   vite: ^3.2.3
+
+dependencies:
+  react-intersection-observer-hook: 2.0.6_react@18.2.0
 
 devDependencies:
   '@react-spring/web': 9.5.5_biqbaboplfbrettd7655fr4n2y
@@ -2233,7 +2237,6 @@ packages:
 
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
-    dev: true
 
   /jsbn/0.1.1:
     resolution: {integrity: sha512-UVU9dibq2JcFWxQPA6KCqj5O42VOmAY3zQUfEKxU0KpTGXwNoCjkX1e13eHNvw/xPynt6pU0rZ1htjWTNTSXsg==}
@@ -2403,7 +2406,6 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
-    dev: true
 
   /magic-string/0.26.7:
     resolution: {integrity: sha512-hX9XH3ziStPoPhJxLq1syWuZMxbDvGNbVchfrdCtanC7D13888bMFow61x8axrx+GfHLtVeAx2kxL7tTGRl+Ow==}
@@ -2910,6 +2912,14 @@ packages:
       react: 18.2.0
     dev: true
 
+  /react-intersection-observer-hook/2.0.6_react@18.2.0:
+    resolution: {integrity: sha512-NTx+4Qat1tS9Bn4CXa6YgmbxLGcxFttV94Us7ZUEZ4mIZD3XaCpnm6U/FU35c6cJOMIfc7UfSzpju69ckfmb+Q==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
@@ -3019,7 +3029,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-    dev: true
 
   /read-cache/1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}

@@ -1,0 +1,46 @@
+._growing {
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.circleWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+.circleWrapper button {
+  width: 33.333%;
+  aspect-ratio: 1;
+  /* 가로너비 대비 세로너비 1:1로 설정해줌 */
+  background-color: var(--mainBlue);
+  border-radius: 50%;
+  border: none;
+}
+
+.circleWrapper button p {
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5rem;
+}
+.circleWrapper button:hover {
+  cursor: pointer;
+}
+
+.circleContentWrapper {
+  min-height: 200px;
+  line-height: 1.3rem;
+  /* background-color: rebeccapurple; */
+}
+
+.circleContent {
+  border: 1px solid black;
+  padding: 15px;
+  margin-top: 30px;
+}

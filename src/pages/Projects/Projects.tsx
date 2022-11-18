@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import tw from "twin.macro";
 import styled from "styled-components";
+import { Label } from "../../components/Label";
 
 function Projects() {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ function Projects() {
 
   return (
     <div>
-      <div tw="px-36 grid mt-12 gap-7 gap-y-[40px] grid-cols-[1fr_minmax(350px,_1fr)]">
+      <div tw="px-36 grid mt-12 gap-8 grid-cols-[1fr_minmax(350px,_1fr)]">
         <Card data-value="mars" onClick={onClickProject}>
           <div tw="h-full overflow-hidden">
             <img src="/imgs/musmaBg.png" />
@@ -24,11 +25,11 @@ function Projects() {
           <div tw="py-1 px-2">
             <p tw="font-bold text-mainBlue pb-2">MARS</p>
             <p>
-              <span className="blue label">React.js</span>
-              <span className="green label">Typescript</span>
-              <span className="rosybrown label">MobX</span>
-              <span className="violet label">Tailwind</span>
-              <span className="yellow label">Javascript</span>
+              <Label txt="React.js" color="blue" />
+              <Label txt="Typescript" color="green" />
+              <Label txt="MobX" color="rosy" />
+              <Label txt="Tailwind" color="violet" />
+              <Label txt="Javascript" color="yellow" />
             </p>
           </div>
         </Card>
@@ -39,11 +40,11 @@ function Projects() {
           <div tw="py-1 px-2">
             <p tw="font-bold text-mainBlue pb-2">Account Manage App</p>
             <p>
-              <span className="blue label">React.js</span>
-              <span className="rosybrown label">Redux-toolkit</span>
-              <span className="yellow label">Axios</span>
-              <span className="violet label">Tailwind</span>
-              <span className="violet label">Antd</span>
+              <Label txt="React.js" color="blue" />
+              <Label txt="Redux-toolkit" color="rosy" />
+              <Label txt="Axios" color="yellow" />
+              <Label txt="Tailwind" color="violet" />
+              <Label txt="Antd" color="violet" />
             </p>
           </div>
         </Card>
@@ -55,9 +56,9 @@ function Projects() {
           <div tw="py-1 px-2">
             <p tw="font-bold text-mainBlue pb-2">Tamna BnB</p>
             <p>
-              <span className="blue label">React.js</span>
-              <span className="violet label">Styled-component</span>
-              <span className="yellow label">HTML</span>
+              <Label txt="React.js" color="blue" />
+              <Label txt="Styled-component" color="violet" />
+              <Label txt="HTML" color="yellow" />
             </p>
           </div>
         </Card>
@@ -71,9 +72,9 @@ function Projects() {
               Threppa &nbsp;(신발 온라인 쇼핑몰)
             </p>
             <p>
-              <span className="blue label">React.js</span>
-              <span className="violet label">SCSS</span>
-              <span className="yellow label">HTML</span>
+              <Label txt="React.js" color="blue" />
+              <Label txt="SCSS" color="violet" />
+              <Label txt="HTML" color="yellow" />
             </p>
           </div>
         </Card>
@@ -115,29 +116,5 @@ const Card = styled.div`
 
   img {
     ${tw`transform duration-300`}
-  }
-
-  span {
-    ${tw`px-[6px] py-[2px] rounded-2xl text-sm mr-1`}
-
-    &.blue {
-      background-color: rgb(211, 229, 239);
-    }
-
-    &.green {
-      background-color: rgb(219, 244, 219);
-    }
-
-    &.rosybrown {
-      background-color: rgb(255, 226, 221);
-    }
-
-    &.violet {
-      background-color: rgb(234, 220, 241);
-    }
-
-    &.yellow {
-      background: rgb(253, 236, 200);
-    }
   }
 `;
