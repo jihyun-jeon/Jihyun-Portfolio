@@ -6,7 +6,7 @@ import {
 import { Outlet } from "react-router-dom";
 
 import Home from "./pages/Home/Home";
-import Mars from "./pages/Projects/Mars";
+import Mars from "./pages/Projects/Mars/Mars";
 import AccountApp from "./pages/Projects/AccountApp";
 import AirbnbApp from "./pages/Projects/AirbnbApp";
 import Threppa from "./pages/Projects/Threppa";
