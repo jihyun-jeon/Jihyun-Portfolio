@@ -1,7 +1,7 @@
 import { useState } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
-import "./accordionMars.css";
+// import "./accordionMars.css";
 
 // const Accordion = ({ CarouselTitle, children }) => {
 //   return (
@@ -49,9 +49,10 @@ const Accordion = ({ CarouselTitle, children }) => {
         {CarouselTitle}
       </Title>
       {/* 아코디언 아이템 */}
-      <div className={`accordionItem ${!isOpen ? "collapsed" : ""}`}>
-        <div className="accordionContent">{children}</div>
-      </div>
+      {/* accordionItem */}
+      <Content className={`${!isOpen ? "collapsed" : ""}`}>
+        <div tw="px-6 pb-1 pt-4">{children}</div>
+      </Content>
     </div>
   );
 };
@@ -65,6 +66,23 @@ const Title = styled.div`
 
   &.open {
     ${tw`text-mainBlue font-bold`}
+  }
+
+  &::before {
+    ${tw`content-[''] w-0 h-0 border-solid border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[5px] border-t-current`}
+  }
+
+  &.open::before {
+    ${tw`content-[''] border-t-0 border-b-[5px] border-solid`}
+  }
+`;
+
+const Content = styled.div`
+  ${tw`overflow-hidden h-auto transition-[height] duration-300 ease-in-expo`}
+  /* transition: max-height 0.3s cubic-bezier(1, 0, 1, 0); */
+
+  &.collapsed {
+    ${tw`h-0`}/* transition: max-height 0.35s cubic-bezier(0, 1, 0, 1); */
   }
 `;
 
