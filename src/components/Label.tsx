@@ -18,7 +18,7 @@ const labelColors: Record<colorTypes, TwStyle> = {
 };
 
 const styles = ({ color }: LabelTypes) => [
-  tw`px-[6px] py-[2px] rounded-2xl text-sm mr-1`,
+  tw`px-[6px] py-[2px] rounded-2xl text-sm mr-2`,
   labelColors[color],
 ];
 

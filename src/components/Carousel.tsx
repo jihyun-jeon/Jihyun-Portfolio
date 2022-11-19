@@ -45,15 +45,19 @@ const Carousel = ({ CarouselData }: CarouselDataType) => {
           <h1 tw="h-12 flex items-center text-xl font-bold">
             📍 {slideItemData.title}
           </h1>
-          <iframe
-            width="700px"
-            height="400px"
-            src={slideItemData.url}
-            title="YouTube video player"
-            frameBorder="1"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          {slideItemData.url.includes("imgs") ? (
+            <img src={slideItemData.url} />
+          ) : (
+            <iframe
+              width="680px"
+              height="387px"
+              src={slideItemData.url}
+              title="YouTube video player"
+              frameBorder="1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          )}
         </div>
       ))}
     </Slider>
