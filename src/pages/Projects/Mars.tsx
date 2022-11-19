@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { Label } from "../../../components/Label";
-import Carousel from "../../../components/Carousel";
-import Accordion from "../../../components/Accordion";
-import LinkIcon from "../../../components/LinkIcon";
-import Growing from "./Growing";
+import { Label } from "../../components/Label";
+import Carousel from "../../components/Carousel";
+import Accordion from "../../components/Accordion";
+import LinkIcon from "../../components/LinkIcon";
+import Growing from "../../components/Growing";
 
 const Mars = () => {
   return (
@@ -135,7 +135,7 @@ const Mars = () => {
         <div tw="max-w-[660px] mx-auto my-10">
           <h1 tw="py-8 text-xl font-bold">성장 포인트</h1>
 
-          <Growing />
+          <Growing GrowingData={GrowingData} />
         </div>
       </div>
     </div>
@@ -170,4 +170,19 @@ const CarouselData = [
     title: "디바이스 디테일 페이지",
     url: "https://www.youtube.com/embed/_-b6ophYQ9s",
   },
+];
+
+const GrowingData = [
+  [
+    "주도적으로 진행한 기획",
+    "구현해야 할 기능 명세만 텍스트로 주어진 상태에서 기획부터 앱 제작까지 하였습니다.\n<br/>도메인이 낯설어 용어 파악을 위해 적극적인 질문을 하였고, 사용자가 원하는 니즈가 무엇인지까지 끊임없이 생각하였습니다.\n<br/>이 경험을 통해단순 기능 구현이 아닌, 도메인과 서비스를 이해하여 <b>사용자가 원하는 가치를 파악하고 그 가치를 코드로 구현 해보는 경험</b>을 하였습니다.",
+  ],
+  [
+    "원만한 대화를 통한\n의견 조율",
+    "MobX를 사용하는데 있어서 다른 팀원과 각자 추구하는 방식이 달랐습니다.\n<br/>때문에 각자가 선호하는 방법을 서로에게 설명하는 시간을 가졌고 또한 구글링을 통해 두 방식은 테스트 할 때의 차이를 보인다는 것을 알아냈습니다.\n그 결과 다른 팀원이 상태 관리 셋팅을 담당하기로 했기 때문에 팀원을 믿고 팀원의 결정대로 진행하였습니다\n<br/>저는 상대와 의견 충돌이 있을 때 <b>동료의 의견이 옳을 수 있다는 열린 마음</b>을 갖고\n동료와의 <b>충분한 상의</b>를 통해 해결해 나갈 것입니다.",
+  ],
+  [
+    "에러 해결기\n(비동기 처리 순서 보장)",
+    "데이터를 put요청 후 다시 get요청을 하여 최신 데이터로 store값을 갱신해줘야 했습니다. \n<br/>그러나 store 업데이트 후 자동으로 리렌더링이 안되고 새로고침을 해야지만 반영이 되는 현상이 발생하였습니다.\n 여러 시도 끝에 api 호출하는 코드에서 응답 값을 콘솔로 찍어보니 put요청과 get요청의 순서가 보장되지 않는 것을 알게 되었습니다. \n<br/>때문에 <b>async구문을 사용</b>하여 두 api호출의 순서를 보장하도록 하였고,\n 나아가 fetch의 then메서드에서 <b>중첩 fetch</b>를 반환하는 식으로 비동기 처리의 순서를 보장할 수도 있다는 것까지 알게 되었습니다.",
+  ],
 ];
