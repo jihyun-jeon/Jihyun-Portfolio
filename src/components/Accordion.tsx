@@ -1,9 +1,15 @@
-import { useEffect, useRef, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 // import "./accordionMars.css";
 
-const Accordion = ({ CarouselTitle, children }) => {
+const Accordion = ({
+  CarouselTitle,
+  children,
+}: {
+  CarouselTitle: string;
+  children: ReactNode;
+}) => {
   const [isOpen, setOpen] = useState(false);
   const [cotentHeight, setCotentHeight] = useState(0);
 

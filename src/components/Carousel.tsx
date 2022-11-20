@@ -36,7 +36,7 @@ const Carousel = ({ CarouselData }: CarouselDataType) => {
     ),
   };
 
-  const sliderRef = useRef<unknown>(null);
+  const sliderRef = useRef<Slider | null>(null); // [타입질문]
 
   return (
     <Slider {...settings} ref={sliderRef}>
