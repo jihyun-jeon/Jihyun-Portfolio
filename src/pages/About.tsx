@@ -12,9 +12,9 @@ const About = () => {
   // }, [isVisible]);
 
   return (
-    <section tw="h-screen">
-      <h1 tw="pt-36 text-center text-3xl font-bold ">ABOUT ME</h1>
-      <div tw="mt-20  flex">
+    <section tw="h-screen pt-[10vh]  flex flex-col justify-center bg-lime-100">
+      {/* <h1 tw="pt-36 text-center text-3xl font-bold ">ABOUT ME</h1> */}
+      <div tw=" bg-red-50 flex">
         <MyImg
           className={isVisible ? "show" : ""}
           tw="bg-[url('/imgs/jihyunImg.png')] bg-contain bg-[center_top_-4rem] bg-no-repeat"

@@ -23,7 +23,7 @@ function Nav() {
 
   return (
     <Navigation tw="fixed w-full z-10" className={`${scrolled ? "scoll" : ""}`}>
-      <div tw="mx-auto max-w-6xl flex justify-between bg-mainBgColor">
+      <div tw="mx-auto max-w-6xl px-5 flex justify-between bg-mainBgColor">
         <ul className="menu">
           <li>HOME</li>
           <li>ABOUT</li>
