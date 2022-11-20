@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useIntersectionObserver } from "react-intersection-observer-hook";
 import { TypeAnimation } from "react-type-animation";
 import tw from "twin.macro";
@@ -10,7 +10,7 @@ import About from "./About";
 import Projects from "./Projects/Projects";
 // import Scene from "../3d/Scene";
 
-const Scene = React.lazy(() => import("../3d/Scene"));
+// const Scene = React.lazy(() => import("../3d/Scene"));
 
 function Home() {
   return (
@@ -18,13 +18,13 @@ function Home() {
       <header>
         <Nav />
         <section tw="h-[50vh]">
-          {/* <Suspense
+          <Suspense
             fallback={
               <h1 tw="w-10 h-2/3 bg-slate-600">Lazy... Lazy... Lazy...</h1>
             }
           >
-            <Scene />
-          </Suspense> */}
+            {/* <Scene /> */}
+          </Suspense>
         </section>
         <section tw="mx-auto max-w-6xl flex items-center h-[40vh]">
           <h1 tw="font-bold text-6xl leading-relaxed">
@@ -64,6 +64,8 @@ function Home() {
           <h1 tw="pt-36 text-center text-3xl font-bold">Projects</h1>
           <Projects />
         </section>
+        <div tw="h-96" />
+        <h1>toy</h1>
       </main>
     </>
   );

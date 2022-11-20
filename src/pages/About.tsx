@@ -7,9 +7,9 @@ const About = () => {
   const [ref, { entry }] = useIntersectionObserver();
   const isVisible = entry && entry.isIntersecting;
 
-  useEffect(() => {
-    console.log(`The component is ${isVisible ? "visible" : "not visible"}.`);
-  }, [isVisible]);
+  // useEffect(() => {
+  //   console.log(`The component is ${isVisible ? "visible" : "not visible"}.`);
+  // }, [isVisible]);
 
   return (
     <section tw="h-screen">
