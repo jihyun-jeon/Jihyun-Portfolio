@@ -9,9 +9,9 @@ import { TextureLoader } from "three";
 
 export default function Model(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/3d/laptop.gltf");
+  const { nodes, materials } = useGLTF(`${import.meta.env.BASE_URL}3d/laptop.gltf`);
 
-  const screenTexture = useLoader(TextureLoader, "/3d/jihyun.jpg");
+  const screenTexture = useLoader(TextureLoader, `${import.meta.env.BASE_URL}3d/jihyun.jpg`);
   screenTexture.flipY = false;
 
   materials["Material.003"].transparent = true;
@@ -449,4 +449,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload("/3d/laptop.gltf");
+useGLTF.preload(`${import.meta.env.BASE_URL}3d/laptop.gltf`);

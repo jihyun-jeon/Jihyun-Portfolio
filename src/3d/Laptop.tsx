@@ -93,7 +93,9 @@ function Laptop() {
           position={[6, 4, -2]}
         />
       </AccumulativeShadows>
-      <Environment files="/3d/photo_studio_loft_hall_1k.hdr" />
+      <Environment
+        files={`${import.meta.env.BASE_URL}3d/photo_studio_loft_hall_1k.hdr`}
+      />
     </>
   );
 }
