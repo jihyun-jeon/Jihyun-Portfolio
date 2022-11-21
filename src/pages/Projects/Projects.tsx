@@ -16,7 +16,7 @@ function Projects() {
   };
 
   return (
-    <section tw="h-screen pt-[10vh] flex flex-col justify-center  bg-sky-200">
+    <>
       <div tw="px-36 grid mt-12 gap-8 grid-cols-[1fr_minmax(350px,_1fr)]">
         <Card data-value="mars" onClick={onClickProject}>
           <div tw="h-full overflow-hidden">
@@ -79,8 +79,8 @@ function Projects() {
           </div>
         </Card>
       </div>
-      {/* <h1 className="font-ll toyTitle">🧸 Toy Project</h1>
-      <div className="itemContainer">
+      {/*     <h1 className="font-ll toyTitle">🧸 Toy Project</h1>
+    <div className="itemContainer">
         <div className="item" data-value="instargram" onClick={onClickProject}>
           <div className="itemBgContainer">
             <img src="/imgs/instargramBg.gif" />
@@ -97,7 +97,7 @@ function Projects() {
         </div>
         <div className="item">s</div>
       </div> */}
-    </section>
+    </>
   );
 }
 

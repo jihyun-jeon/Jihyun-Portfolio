@@ -56,10 +56,14 @@ function Home() {
         </section>
       </header>
       <main tw="mx-auto max-w-6xl">
-        <About />
+        <section tw="h-screen pt-[10vh]  flex flex-col justify-center border-[2px]">
+          <About />
+        </section>
         {/* <div tw="h-32" /> */}
         {/* <h1 tw="pt-36 text-center text-3xl font-bold">Projects</h1> */}
-        <Projects />
+        <section tw="h-screen pt-[10vh] flex flex-col justify-center  bg-sky-200">
+          <Projects />
+        </section>
         <h1>toy</h1>
       </main>
     </>

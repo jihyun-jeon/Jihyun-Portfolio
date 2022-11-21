@@ -3,7 +3,7 @@ import tw, { styled } from "twin.macro";
 import { OneLineBreaking, SeveralLineBreaking } from "../util/LineBreaking";
 
 const Growing = ({ GrowingData }: { GrowingData: string[][] }) => {
-  const [clickValue, setClickValue] = useState(1);
+  const [clickValue, setClickValue] = useState(0);
 
   const onClickCircle = (e: React.MouseEvent<HTMLButtonElement>) => {
     const { value } = e.currentTarget;

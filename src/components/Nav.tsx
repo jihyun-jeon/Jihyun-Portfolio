@@ -28,6 +28,7 @@ function Nav() {
           <li>HOME</li>
           <li>ABOUT</li>
           <li>PROJECTS</li>
+          <li>TOY PROJECTS</li>
         </ul>
         <ul className="menu">
           <li>

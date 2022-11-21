@@ -26,9 +26,11 @@ const AccountApp = () => {
         <InfoList>
           <li tw="font-bold mb-5">서비스 소개</li>
           <li>
-            원티드 프리온보딩 프로그램을 하며 진행한 프로젝트 입니다.
-            <br /> 투자 관리 서비스의 관리자 페이지이며, 계좌와 고객 정보를
-            관리할 수 있습니다.
+            투자 관리 서비스의 관리자 페이지이며, 계좌정보와 고객 정보를 관리할
+            수 있습니다.
+            <br />
+            원티드 프리온보딩 프로그램을 하며 진행한 프로젝트 중 제가 팀원들께
+            도움을 준 사항이 많아 제일 기억에 남는 과제입니다.
           </li>
         </InfoList>
         <InfoList>
@@ -81,8 +83,8 @@ const AccountApp = () => {
           <Accordion CarouselTitle={"2. 페이징 히스토리 연동 처리"}>
             <div tw="mb-6">
               선택된 필터 항목 값으로 쿼리 주소를 바꾸고, 브라우저의 주소가
-              바뀌면 해당 쿼리 값을 URLSearchParams로 읽어서 해당 페이지에 맞는
-              리스트를 추려서 보여줄 수 있도록 구현하였습니다.
+              이동되면 해당 쿼리 값을 URLSearchParams로 읽어서 해당 페이지에
+              맞는 리스트를 추려서 보여줄 수 있도록 구현하였습니다.
             </div>
           </Accordion>
           <Accordion CarouselTitle={"3. Redux Toolkit을 사용한 상태관리"}>
