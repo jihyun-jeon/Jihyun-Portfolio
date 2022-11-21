@@ -1,7 +1,6 @@
 import { useIntersectionObserver } from "react-intersection-observer-hook";
 import tw from "twin.macro";
 import styled from "styled-components";
-
 const About = () => {
   const [ref, { entry }] = useIntersectionObserver();
   const isVisible = entry && entry.isIntersecting;
@@ -10,7 +9,7 @@ const About = () => {
     <div tw="flex" ref={ref}>
       <MyImg
         className={isVisible ? "show" : ""}
-        tw="bg-[url('/imgs/jihyunImg.png')] bg-contain bg-[center_top_-4rem] bg-no-repeat"
+        tw="bg-contain bg-[center_top_-4rem] bg-no-repeat"
       />
       <AboutText className={isVisible ? "show" : ""}>
         <h1>
@@ -50,6 +49,8 @@ export default About;
 
 const MyImg = styled.div`
   ${tw`w-1/3 -translate-x-32 opacity-0 transition-all delay-300 duration-500`}
+
+  background-image: url(${import.meta.env.BASE_URL}imgs/jihyunImg.png);
 
   &.show {
     ${tw`translate-x-0 opacity-100`}

@@ -4,7 +4,7 @@ import tw, { theme, GlobalStyles as BaseStyles } from "twin.macro";
 const FontStyles = createGlobalStyle`
   @font-face {
     font-family: 'LINESeedSansKR';
-    src: url(/fonts/LINESeedSansKR-Rg.woff2) format('woff2');
+    src: url(${import.meta.env.BASE_URL}/fonts/LINESeedSansKR-Rg.woff2) format('woff2');
     font-style: normal;
     font-weight: 400;
     font-display: fallback;
@@ -12,7 +12,7 @@ const FontStyles = createGlobalStyle`
 
   @font-face {
     font-family: 'LINESeedSansKR';
-    src: url(/fonts/LINESeedSansKR-Bd.woff2) format('woff2');
+    src: url(${import.meta.env.BASE_URL}/fonts/LINESeedSansKR-Bd.woff2) format('woff2');
     font-style: bold;
     font-weight: 700;
     font-display: fallback;

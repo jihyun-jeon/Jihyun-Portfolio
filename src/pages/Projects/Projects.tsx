@@ -20,7 +20,7 @@ function Projects() {
       <div tw="px-36 grid mt-12 gap-8 grid-cols-[1fr_minmax(350px,_1fr)]">
         <Card data-value="mars" onClick={onClickProject}>
           <div tw="h-full overflow-hidden">
-            <img src="/imgs/musmaBg.png" />
+            <img src={`${import.meta.env.BASE_URL}imgs/musmaBg.png`} />
           </div>
           <div tw="py-1 px-2">
             <p tw="font-bold text-mainBlue pb-2">MARS</p>
@@ -35,7 +35,7 @@ function Projects() {
         </Card>
         <Card data-value="account" onClick={onClickProject}>
           <div tw="h-full overflow-hidden">
-            <img src="/imgs/accountBg.png" />
+            <img src={`${import.meta.env.BASE_URL}imgs/accountBg.png`} />
           </div>
           <div tw="py-1 px-2">
             <p tw="font-bold text-mainBlue pb-2">Account Manage App</p>
@@ -51,7 +51,7 @@ function Projects() {
 
         <Card data-value="airbnb" onClick={onClickProject}>
           <div tw="h-full overflow-hidden">
-            <img src="/imgs/airbnbBg.png" />
+            <img src={`${import.meta.env.BASE_URL}imgs/airbnbBg.png`} />
           </div>
           <div tw="py-1 px-2">
             <p tw="font-bold text-mainBlue pb-2">Tamna BnB</p>
@@ -65,7 +65,7 @@ function Projects() {
 
         <Card data-value="threppa" onClick={onClickProject}>
           <div tw="h-full overflow-hidden">
-            <img src="/imgs/threppaBg.png" />
+            <img src={`${import.meta.env.BASE_URL}imgs/threppaBg.png`} />
           </div>
           <div tw="py-1 px-2">
             <p tw="font-bold text-mainBlue pb-2">
@@ -83,7 +83,7 @@ function Projects() {
     <div className="itemContainer">
         <div className="item" data-value="instargram" onClick={onClickProject}>
           <div className="itemBgContainer">
-            <img src="/imgs/instargramBg.gif" />
+            <img src={`${import.meta.env.BASE_URL}imgs/instargramBg.gif`} />
           </div>
           <div className="ImgDescription">
             <p className="title">Instargram</p>

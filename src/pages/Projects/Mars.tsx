@@ -126,7 +126,10 @@ const Mars = () => {
                 <br />이 결과 한 컴포넌트를 사용해도 상황에 맞는 별도의 UI를
                 그릴 수 있었습니다.
               </div>
-              <img src="/imgs/components.png" tw="w-full h-96 mt-2" />
+              <img
+                src={`${import.meta.env.BASE_URL}imgs/components.png`}
+                tw="w-full h-96 mt-2"
+              />
             </div>
           </Accordion>
         </div>
