@@ -14,52 +14,55 @@ const ProjectWrapper = styled.div`
   ${tw`py-24`}
 `;
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: (
-      <>
-        <ScrollToTop />
-        <Outlet />
-      </>
-    ),
-    children: [
-      { path: "/", element: <Home /> },
-      {
-        path: "/Mars",
-        element: (
-          <ProjectWrapper>
-            <Mars />
-          </ProjectWrapper>
-        ),
-      },
-      {
-        path: "/account",
-        element: (
-          <ProjectWrapper>
-            <AccountApp />
-          </ProjectWrapper>
-        ),
-      },
-      {
-        path: "/airbnb",
-        element: (
-          <ProjectWrapper>
-            {" "}
-            <AirbnbApp />
-          </ProjectWrapper>
-        ),
-      },
-      {
-        path: "/threppa",
-        element: (
-          <ProjectWrapper>
-            <Threppa />
-          </ProjectWrapper>
-        ),
-      },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: (
+        <>
+          <ScrollToTop />
+          <Outlet />
+        </>
+      ),
+      children: [
+        { path: "/", element: <Home /> },
+        {
+          path: "/Mars",
+          element: (
+            <ProjectWrapper>
+              <Mars />
+            </ProjectWrapper>
+          ),
+        },
+        {
+          path: "/account",
+          element: (
+            <ProjectWrapper>
+              <AccountApp />
+            </ProjectWrapper>
+          ),
+        },
+        {
+          path: "/airbnb",
+          element: (
+            <ProjectWrapper>
+              {" "}
+              <AirbnbApp />
+            </ProjectWrapper>
+          ),
+        },
+        {
+          path: "/threppa",
+          element: (
+            <ProjectWrapper>
+              <Threppa />
+            </ProjectWrapper>
+          ),
+        },
+      ],
+    },
+  ],
+  { basename: "/portfolio/" }
+);
 
 export default router;
