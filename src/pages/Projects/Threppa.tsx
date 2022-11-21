@@ -136,7 +136,7 @@ const CarouselData = [
   },
   {
     title: "nav bar, side menu",
-    url: "/imgs/threppaMenu.png",
+    url: `${import.meta.env.BASE_URL}imgs/threppaMenu.png`,
   },
 ];
 

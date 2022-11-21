@@ -11,7 +11,7 @@ const LinkIcon = ({ txt, url }: { txt: string; url: string }) => {
       ) : (
         <img
           tw="w-6 h-6 align-[-0.15rem] rounded-[3px] mr-1"
-          src="/imgs/note.png"
+          src={`${import.meta.env.BASE_URL}imgs/note.png`}
         />
       )}
 
