@@ -1,7 +1,6 @@
 import { ReactNode, useEffect, useRef, useState } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
-// import "./accordionMars.css";
 
 const Accordion = ({
   CarouselTitle,

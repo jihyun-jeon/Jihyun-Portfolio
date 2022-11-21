@@ -1,6 +1,4 @@
-import tw from "twin.macro";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import "twin.macro";
 
 const LinkIcon = ({ txt, url }: { txt: string; url: string }) => {
   return (

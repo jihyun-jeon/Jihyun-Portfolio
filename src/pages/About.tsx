@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { useIntersectionObserver } from "react-intersection-observer-hook";
 import tw from "twin.macro";
 import styled from "styled-components";
@@ -7,18 +6,14 @@ const About = () => {
   const [ref, { entry }] = useIntersectionObserver();
   const isVisible = entry && entry.isIntersecting;
 
-  // useEffect(() => {
-  //   console.log(`The component is ${isVisible ? "visible" : "not visible"}.`);
-  // }, [isVisible]);
-
   return (
-    <div tw="flex">
+    <div tw="flex" ref={ref}>
       <MyImg
         className={isVisible ? "show" : ""}
         tw="bg-[url('/imgs/jihyunImg.png')] bg-contain bg-[center_top_-4rem] bg-no-repeat"
       />
       <AboutText className={isVisible ? "show" : ""}>
-        <h1 ref={ref}>
+        <h1>
           저는 <span>기본기가 탄탄한</span> 프론트엔드 개발자
           <span>전지현</span>
           입니다

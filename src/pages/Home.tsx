@@ -1,14 +1,9 @@
-import React, { ReactNode, useEffect, useRef, useState } from "react";
-import { useIntersectionObserver } from "react-intersection-observer-hook";
+import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import tw from "twin.macro";
-import styled from "styled-components";
 import { Suspense } from "react";
-import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
 import About from "./About";
 import Projects from "./Projects/Projects";
-// import Scene from "../3d/Scene";
 
 const Scene = React.lazy(() => import("../3d/Scene"));
 

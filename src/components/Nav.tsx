@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
-
+import { useEffect, useState } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
 
 function Nav() {
   const [scrolled, setScrolled] = useState(false);

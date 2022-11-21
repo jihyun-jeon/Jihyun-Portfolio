@@ -1,7 +1,7 @@
-import React, { Component, useRef } from "react";
+import { useRef } from "react";
 import Slider, { Settings } from "react-slick";
 import "./Carousel.css";
-import tw from "twin.macro";
+import "twin.macro";
 
 import {
   IoMdArrowDropleftCircle,

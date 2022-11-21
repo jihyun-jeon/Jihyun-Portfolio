@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from "react";
+import React, { useState } from "react";
 import tw, { styled } from "twin.macro";
 import { OneLineBreaking, SeveralLineBreaking } from "../util/LineBreaking";
 
