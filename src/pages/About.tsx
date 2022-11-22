@@ -2,35 +2,30 @@ import { useIntersectionObserver } from "react-intersection-observer-hook";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { ReactNode, useEffect, useRef, useState } from "react";
+
 const About = () => {
   // const [ref, { entry }] = useIntersectionObserver();
   // const isVisible = entry && entry.isIntersecting;
-  // let isVisible = false;
-  const [isVisible, setIsVisible] = useState(false);
 
-  const [TargetEl, setTargetEl] = useState<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const TargetRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    let observer: IntersectionObserver;
-
-    if (TargetEl) {
-      observer = new IntersectionObserver(
+    // [질문] 왜 useEffect를 써야하는건지? 이 코드 돌아가는 구체적인 로직 파악필요
+    if (TargetRef.current) {
+      let observer = new IntersectionObserver(
         ([entry], observer) => {
-          if (entry.isIntersecting) {
-            setIsVisible(entry.isIntersecting);
-          }
+          setIsVisible(entry.isIntersecting); // 교차되면 true, 교차 안되면 false 인 것임
         },
-        { threshold: 0.4 }
+        { threshold: 0.1 }
       );
 
-      observer.observe(TargetEl); //특정 html요소가 등장하는지, 사라지는지 감시할 수 있음.
+      observer.observe(TargetRef.current); //특정 html요소가 등장하는지, 사라지는지 감시할 수 있음.
     }
-
-    return () => observer && observer.disconnect();
-  }, [TargetEl]);
+  }, [isVisible]);
 
   return (
-    <div tw="flex" ref={setTargetEl}>
+    <div tw="flex" ref={TargetRef}>
       <MyImg
         className={isVisible ? "show" : ""}
         tw="bg-contain bg-[center_top_-4rem] bg-no-repeat"
