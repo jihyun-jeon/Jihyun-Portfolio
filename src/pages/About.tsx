@@ -1,12 +1,36 @@
 import { useIntersectionObserver } from "react-intersection-observer-hook";
 import tw from "twin.macro";
 import styled from "styled-components";
+import { ReactNode, useEffect, useRef, useState } from "react";
 const About = () => {
-  const [ref, { entry }] = useIntersectionObserver();
-  const isVisible = entry && entry.isIntersecting;
+  // const [ref, { entry }] = useIntersectionObserver();
+  // const isVisible = entry && entry.isIntersecting;
+  // let isVisible = false;
+  const [isVisible, setIsVisible] = useState(false);
+
+  const [TargetEl, setTargetEl] = useState<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    let observer: IntersectionObserver;
+
+    if (TargetEl) {
+      observer = new IntersectionObserver(
+        ([entry], observer) => {
+          if (entry.isIntersecting) {
+            setIsVisible(entry.isIntersecting);
+          }
+        },
+        { threshold: 0.4 }
+      );
+
+      observer.observe(TargetEl); //특정 html요소가 등장하는지, 사라지는지 감시할 수 있음.
+    }
+
+    return () => observer && observer.disconnect();
+  }, [TargetEl]);
 
   return (
-    <div tw="flex" ref={ref}>
+    <div tw="flex" ref={setTargetEl}>
       <MyImg
         className={isVisible ? "show" : ""}
         tw="bg-contain bg-[center_top_-4rem] bg-no-repeat"

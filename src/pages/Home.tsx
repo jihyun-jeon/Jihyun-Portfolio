@@ -11,7 +11,7 @@ function Home() {
       <header tw="h-[100vh]">
         <Nav />
         <section>
-          <Scene />
+          {/* <Scene /> */} <div tw="w-full pt-[10vh] h-[50vh]" />
         </section>
         <section tw="mx-auto max-w-6xl flex items-center h-[40%]">
           <h1 tw="font-bold text-6xl leading-relaxed">
