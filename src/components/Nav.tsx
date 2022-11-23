@@ -100,7 +100,7 @@ const MenuList = styled.li`
 
   .selectedLine {
     height: 5px;
-    background-color: ${(props: { isNow: boolean }) =>
+    background-color: ${(props: { isNow?: boolean }) =>
       props.isNow ? "#4d559f" : ""};
   }
 `;
