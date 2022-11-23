@@ -11,7 +11,7 @@ import tw, { styled } from "twin.macro";
 import ScrollToTop from "./components/ScrollToTop";
 
 const ProjectWrapper = styled.div`
-  ${tw`py-24`}
+  ${tw`py-24 overflow-x-hidden`}
 `;
 
 const router = createBrowserRouter(

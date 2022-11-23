@@ -163,18 +163,6 @@ const CarouselData = [
     title: "담당 부분 데모영상",
     url: "https://www.youtube.com/embed/IipXP5xTzAY",
   },
-  {
-    title: "React Slick 을 이용한 캐러셀 구현",
-    url: "",
-  },
-  {
-    title: "Kakao Maps API 를 연동한 숙소 지도",
-    url: "",
-  },
-  {
-    title: "무한스크롤, 페이지네이션",
-    url: "",
-  },
 ];
 
 const GrowingData = [

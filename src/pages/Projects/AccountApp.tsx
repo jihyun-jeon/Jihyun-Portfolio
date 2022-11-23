@@ -124,16 +124,16 @@ const InfoList = styled.ul`
 
 const CarouselData = [
   {
-    title: "React Hook Form 라이브러리를 활용한 로그인 구현",
-    url: `${import.meta.env.BASE_URL}imgs/account-login.gif`,
-  },
-  {
     title: "계좌 리스트 페이지",
     url: `${import.meta.env.BASE_URL}imgs/account-list.gif`,
   },
   {
     title: "사용자 상세 페이지",
-    url: "",
+    url: `${import.meta.env.BASE_URL}imgs/accountDetail.png`,
+  },
+  {
+    title: "React Hook Form 라이브러리를 활용한 로그인 구현",
+    url: `${import.meta.env.BASE_URL}imgs/account-login.gif`,
   },
 ];
 

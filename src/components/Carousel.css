@@ -4,13 +4,12 @@
   justify-content: center;
   width: 100vw;
   position: relative;
-  background-color: rebeccapurple;
   left: calc(-50vw + 50%);
 }
 
 .slick-list {
-  width: 700px;
-  /* height: 430px; */
+  width: 1200px;
+  padding-bottom: 20px;
   overflow: hidden;
 }
 
