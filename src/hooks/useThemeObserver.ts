@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 export const useThemeObserver = (
   setState: React.Dispatch<React.SetStateAction<number>>,
   stateNumber: number
-): React.MutableRefObject<HTMLElement | null>[] => {
+): React.MutableRefObject<HTMLDivElement | null>[] => {
   const isRef = useRef<HTMLDivElement | null>(null);
   const option = {};
 

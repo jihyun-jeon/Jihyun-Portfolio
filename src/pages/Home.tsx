@@ -14,10 +14,11 @@ function Home() {
   const [explainRef] = useThemeObserver(setNavNumber, 1);
   const [analysisRef] = useThemeObserver(setNavNumber, 2);
   const [eventRef] = useThemeObserver(setNavNumber, 3);
+  const [toyRef] = useThemeObserver(setNavNumber, 4);
 
   return (
     <>
-      <Page>
+      <Page id="HOME">
         <Nav navNumber={navNumber} />
         <section>
           {/* <Scene /> */} <div tw="w-full pt-[10vh] h-[50vh]" />
@@ -52,17 +53,21 @@ function Home() {
         <div ref={explainRef} tw="pt-5" />
       </Page>
       <main tw="mx-auto max-w-6xl">
-        <Page tw="pt-[10vh]  flex flex-col justify-center border-[2px]">
+        <Page id="ABOUT" tw="pt-[10vh]  flex flex-col justify-center ">
           <About />
           <div ref={analysisRef} />
         </Page>
-        {/* <div tw="h-32" /> */}
-        {/* <h1 tw="pt-36 text-center text-3xl font-bold">Projects</h1> */}
-        <Page tw="pt-[10vh] flex flex-col justify-center  bg-sky-200">
+        <Page id="PROJECTS" tw="pt-[10vh] flex flex-col justify-center">
           <Projects />
           <div ref={eventRef} />
         </Page>
-        <h1>toy</h1>
+        <Page
+          id="TOY-PROJECTS"
+          tw="pt-[10vh] flex flex-col justify-center bg-orange-200"
+        >
+          <h1>toy</h1>
+          <div ref={toyRef} />
+        </Page>
       </main>
     </>
   );

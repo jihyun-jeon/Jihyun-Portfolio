@@ -46,11 +46,14 @@ const Carousel = ({ CarouselData }: CarouselDataType) => {
             📍 {slideItemData.title}
           </h1>
           {slideItemData.url.includes("imgs") ? (
-            <img src={slideItemData.url} />
+            <img
+              src={slideItemData.url}
+              style={{ width: "1000px", height: "600px" }}
+            />
           ) : (
             <iframe
-              width="680px"
-              height="387px"
+              width="1000px"
+              height="600px"
               src={slideItemData.url}
               title="YouTube video player"
               frameBorder="1"

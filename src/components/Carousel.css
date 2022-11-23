@@ -2,8 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
   position: relative;
+  background-color: rebeccapurple;
+  left: calc(-50vw + 50%);
 }
 
 .slick-list {
