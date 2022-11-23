@@ -40,7 +40,7 @@ function Nav({ navNumber }: { navNumber: number }) {
           {menuData.map((data, idx) => (
             <MenuList key={idx} value={+navNumber === +(idx + 1)}>
               <a href={`#${data}`} onClick={OnClickMenu}>
-                {data}
+                {data.includes("-") ? data.replace("-", " ") : data}
               </a>
 
               <p className="selectedLine" />

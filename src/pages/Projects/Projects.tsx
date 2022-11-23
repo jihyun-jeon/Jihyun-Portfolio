@@ -17,8 +17,8 @@ function Projects() {
 
   return (
     <>
-      <h1 tw="flex justify-center mb-2 font-semibold text-4xl">Projects</h1>
-      <div tw="px-36 grid mt-12 gap-8 grid-cols-[1fr_minmax(350px,_1fr)]">
+      <h1 tw="flex justify-center font-semibold text-4xl">Projects</h1>
+      <div tw="px-36 grid my-10 gap-8 grid-cols-[1fr_minmax(350px,_1fr)]">
         <Card data-value="mars" onClick={onClickProject}>
           <div tw="h-full overflow-hidden">
             <img src={`${import.meta.env.BASE_URL}imgs/musmaBg.png`} />

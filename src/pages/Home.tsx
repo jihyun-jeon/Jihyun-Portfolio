@@ -21,7 +21,8 @@ function Home() {
       <Page id="HOME">
         <Nav navNumber={navNumber} />
         <section>
-          {/* <Scene /> */} <div tw="w-full pt-[10vh] h-[50vh]" />
+          <Scene />
+          {/* <div tw="w-full pt-[10vh] h-[50vh]" /> */}
         </section>
         <section tw="mx-auto max-w-6xl flex items-center h-[40%]">
           <h1 tw="font-bold text-6xl leading-relaxed">
@@ -61,13 +62,13 @@ function Home() {
           <Projects />
           <div ref={eventRef} />
         </Page>
-        <Page
+        {/* <Page
           id="TOY-PROJECTS"
           tw="pt-[10vh] flex flex-col justify-center bg-orange-200"
         >
           <h1>toy</h1>
           <div ref={toyRef} />
-        </Page>
+        </Page> */}
       </main>
     </>
   );
