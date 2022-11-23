@@ -38,7 +38,7 @@ function Nav({ navNumber }: { navNumber: number }) {
       <div tw="mx-auto max-w-6xl px-5 flex justify-between bg-mainBgColor">
         <ul className="menu">
           {menuData.map((data, idx) => (
-            <MenuList key={idx} value={+navNumber === +(idx + 1)}>
+            <MenuList key={idx} isNow={+navNumber === +(idx + 1)}>
               <a href={`#${data}`} onClick={OnClickMenu}>
                 {data.includes("-") ? data.replace("-", " ") : data}
               </a>
@@ -100,6 +100,7 @@ const MenuList = styled.li`
 
   .selectedLine {
     height: 5px;
-    background-color: ${(props) => (props.value ? "#4d559f" : "")};
+    background-color: ${(props: { isNow: boolean }) =>
+      props.isNow ? "#4d559f" : ""};
   }
 `;
