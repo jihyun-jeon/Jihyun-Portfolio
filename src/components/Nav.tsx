@@ -2,8 +2,11 @@ import { useEffect, useState } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 
-function Nav() {
+const menuData = ["HOME", "ABOUT", "PROJECTS", "TOY PROJECTS"];
+
+function Nav({ navNumber }: { navNumber: number }) {
   const [scrolled, setScrolled] = useState(false);
+  console.log(navNumber);
 
   const onScroll = () => {
     setScrolled(window.scrollY > 20);
@@ -26,10 +29,12 @@ function Nav() {
     >
       <div tw="mx-auto max-w-6xl px-5 flex justify-between bg-mainBgColor">
         <ul className="menu">
-          <li>HOME</li>
-          <li>ABOUT</li>
-          <li>PROJECTS</li>
-          <li>TOY PROJECTS</li>
+          {menuData.map((data, idx) => (
+            <MenuList key={idx} value={+navNumber === +(idx + 1)}>
+              <p>{data}</p>
+              <p className="selectedLine" />
+            </MenuList>
+          ))}
         </ul>
         <ul className="menu">
           <li>
@@ -55,9 +60,7 @@ const Navigation = styled.nav`
     box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.2);
   }
   .menu {
-    ${tw`flex content-between items-center  h-[10vh]`}
-
-    li {
+    ${tw`flex content-between items-center  h-[10vh]`}/* li {
       ${tw`font-bold text-xl flex m-5`}
 
       &:first-of-type {
@@ -67,6 +70,24 @@ const Navigation = styled.nav`
       &:last-of-type {
         ${tw`mr-0`}
       }
-    }
+    } */
+  }
+`;
+
+const MenuList = styled.li`
+  ${tw`font-bold text-xl  m-5`}
+
+  &:first-of-type {
+    ${tw`ml-0`}
+  }
+
+  &:last-of-type {
+    ${tw`mr-0`}
+  }
+
+  .selectedLine {
+    height: 5px;
+    background-color: ${(props) => (props.value ? "#4d559f" : "")};
+    /* border-bottom: ${(props) => (props.value ? "4px solid #4d559f" : "")}; */
   }
 `;

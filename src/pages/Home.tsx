@@ -1,15 +1,24 @@
-import "twin.macro";
+import tw from "twin.macro";
 import { TypeAnimation } from "react-type-animation";
 import Nav from "../components/Nav";
 import About from "./About";
 import Projects from "./Projects/Projects";
 import Scene from "../3d/Scene";
+import React, { useEffect, useRef, useState } from "react";
+import styled from "styled-components";
+import { useThemeObserver } from "../hooks/useThemeObserver";
 
 function Home() {
+  const [navNumber, setNavNumber] = useState(1);
+
+  const [explainRef] = useThemeObserver(setNavNumber, 1);
+  const [analysisRef] = useThemeObserver(setNavNumber, 2);
+  const [eventRef] = useThemeObserver(setNavNumber, 3);
+
   return (
     <>
-      <header tw="h-[100vh]">
-        <Nav />
+      <Page>
+        <Nav navNumber={navNumber} />
         <section>
           {/* <Scene /> */} <div tw="w-full pt-[10vh] h-[50vh]" />
         </section>
@@ -40,16 +49,19 @@ function Home() {
             </div>
           </h1>
         </section>
-      </header>
+        <div ref={explainRef} tw="pt-5" />
+      </Page>
       <main tw="mx-auto max-w-6xl">
-        <section tw="h-screen pt-[10vh]  flex flex-col justify-center border-[2px]">
+        <Page tw="pt-[10vh]  flex flex-col justify-center border-[2px]">
           <About />
-        </section>
+          <div ref={analysisRef} />
+        </Page>
         {/* <div tw="h-32" /> */}
         {/* <h1 tw="pt-36 text-center text-3xl font-bold">Projects</h1> */}
-        <section tw="h-screen pt-[10vh] flex flex-col justify-center  bg-sky-200">
+        <Page tw="pt-[10vh] flex flex-col justify-center  bg-sky-200">
           <Projects />
-        </section>
+          <div ref={eventRef} />
+        </Page>
         <h1>toy</h1>
       </main>
     </>
@@ -57,3 +69,7 @@ function Home() {
 }
 
 export default Home;
+
+const Page = styled.section`
+  ${tw`h-screen`}
+`;
