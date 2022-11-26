@@ -17,7 +17,9 @@ function Projects() {
 
   return (
     <>
-      <h1 tw="flex justify-center font-semibold text-4xl">Projects</h1>
+      <h1 tw="flex justify-center font-semibold text-4xl text-mainBlue">
+        Projects
+      </h1>
       <div tw="px-36 grid my-10 gap-8 grid-cols-[1fr_minmax(350px,_1fr)]">
         <Card data-value="mars" onClick={onClickProject}>
           <div tw="h-full overflow-hidden">
@@ -80,24 +82,6 @@ function Projects() {
           </div>
         </Card>
       </div>
-      {/*     <h1 className="font-ll toyTitle">🧸 Toy Project</h1>
-    <div className="itemContainer">
-        <div className="item" data-value="instargram" onClick={onClickProject}>
-          <div className="itemBgContainer">
-            <img src={`${import.meta.env.BASE_URL}imgs/instargramBg.gif`} />
-          </div>
-          <div className="ImgDescription">
-            <p className="title">Instargram</p>
-            <p>
-              <span className="blue label">React.js</span>
-              <span className="yellow label">Javascript</span>
-              <span className="green label">CSS</span>
-              <span className="yellow label">HTML</span>
-            </p>
-          </div>
-        </div>
-        <div className="item">s</div>
-      </div> */}
     </>
   );
 }

@@ -1,7 +1,6 @@
-import { useIntersectionObserver } from "react-intersection-observer-hook";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,7 +22,9 @@ const About = () => {
 
   return (
     <>
-      <h1 tw="flex justify-center mb-20 font-semibold text-4xl">About Me</h1>
+      <h1 tw="flex justify-center mb-20 font-semibold text-4xl text-mainBlue">
+        About Me
+      </h1>
       <div tw="flex" ref={TargetRef}>
         <MyImg
           className={isVisible ? "show" : ""}

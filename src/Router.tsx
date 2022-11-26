@@ -46,7 +46,6 @@ const router = createBrowserRouter(
           path: "/airbnb",
           element: (
             <ProjectWrapper>
-              {" "}
               <AirbnbApp />
             </ProjectWrapper>
           ),

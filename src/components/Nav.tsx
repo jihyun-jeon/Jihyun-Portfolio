@@ -23,8 +23,12 @@ function Nav({ navNumber }: { navNumber: number }) {
   }, []);
 
   const OnClickMenu = (e: React.SyntheticEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const MemuData = (e.target as HTMLAnchorElement).innerText;
+    e.preventDefault(); // a태그의 주소이동 막고
+    let MemuData = (e.target as HTMLAnchorElement).innerText;
+    if (MemuData.includes(" ")) {
+      MemuData = MemuData.replace(" ", "-");
+    }
+
     const IdMatchedPage = document.querySelector(`#${MemuData}`);
     IdMatchedPage?.scrollIntoView({ behavior: "smooth" });
     // id를 갖은 요소에 scrollIntoview 걸어야 함
