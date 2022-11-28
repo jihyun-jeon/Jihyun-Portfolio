@@ -52,9 +52,9 @@ function ToyProjects() {
             </p>
             <p>
               <Label txt="React.js" color="blue" />
+              <Label txt="Typescript" color="green" />
               <Label txt="Tailwind" color="violet" />
               <Label txt="Styled-component" color="rosy" />
-              <Label txt="HTML" color="yellow" />
             </p>
             <p tw="pt-3">현재 포트폴리오 사이트 입니다.</p>
           </div>
