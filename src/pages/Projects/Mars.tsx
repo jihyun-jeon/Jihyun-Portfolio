@@ -146,7 +146,10 @@ const Mars = () => {
             같은 프론트엔드 동료의 저에 대한 평가입니다. &#40;출처 :동료 블로그
             &#41;
           </p>
-          <img src={"/imgs/harry.png"} alt="musma동료평가" />
+          <img
+            src={`${import.meta.env.BASE_URL}imgs/harry.png`}
+            alt="musma동료평가"
+          />
         </div>
       </div>
     </div>
