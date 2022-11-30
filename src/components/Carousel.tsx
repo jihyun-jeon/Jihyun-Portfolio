@@ -47,7 +47,6 @@ const Carousel = ({ CarouselData }: CarouselDataType) => {
           </h1>
           {slideItemData.url.includes("imgs") ? (
             <div
-              // src={slideItemData.url}
               style={{
                 backgroundImage: `url(${slideItemData.url})`,
                 backgroundRepeat: "no-repeat",

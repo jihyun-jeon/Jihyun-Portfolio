@@ -66,19 +66,6 @@ const Threppa = () => {
                 을 통해 맞추어 <br />
                 클라이언트 에러 알림을 하단에 보여주었습니다.
               </div>
-
-              {/* <div tw="mb-6">
-                <p tw="font-bold">📍 커스텀 부분</p>
-                <p tw="ml-2 mt-1">
-                  <span> - </span>
-                  이메일과 비밀번호 필수 입력, 입력 자릿수 길이 검사, 정규식을
-                  활용한 비밀번호 유효성 검사
-                </p>
-                <p tw="ml-2 mt-1">
-                  <span> - </span>
-                  유효성 검사 오류시 각 상황에 맞는 에러 메세지 출력
-                </p>
-              </div> */}
             </div>
           </Accordion>
           <Accordion CarouselTitle={"2. 장바구니 및 주문완료"}>

@@ -1,4 +1,3 @@
-// useThemeObserver.ts
 import { useEffect, useRef } from "react";
 
 export const useThemeObserver = (

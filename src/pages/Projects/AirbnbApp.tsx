@@ -32,7 +32,6 @@ const AirbnbApp = () => {
           <li>
             이 서비스는 Airbnb 사이트를 모티브하여 진행한 숙소 검색 및 예약
             사이트 입니다.
-            {/* <span tw="font-semibold pl-1 text-mainOrange">" "</span> */}
           </li>
         </InfoList>
         <InfoList>
@@ -92,7 +91,6 @@ const AirbnbApp = () => {
               카카오 지도를 사용하였습니다.
             </div>
             <div tw="mb-6">
-              {/* <p tw="font-bold"> 📍 페이지네이션</p> */}
               <p tw="ml-2 mt-1">
                 <span> 📍 </span>
                 해당 숙소의 좌표에 맞는 부분에 Marker가 표시
@@ -117,7 +115,6 @@ const AirbnbApp = () => {
             <div tw="mb-6">
               <p tw="font-bold"> 📍 커스텀 부분</p>
               <p tw="ml-2 mt-1">
-                {/* <span> - </span> */}
                 캐러셀 좌우 화살표와 하단 페이지네이션 점을 옵션으로 넣고, CSS
                 선택자로 스타일을 추가하였습니다.
               </p>

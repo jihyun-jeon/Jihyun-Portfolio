@@ -58,8 +58,7 @@ const Growing = ({ GrowingData }: { GrowingData: string[][] }) => {
 
 const StyledGrowing = styled.div`
   button {
-    ${tw`w-1/3 aspect-square bg-mainBlue text-white rounded-[50%] border-[5px] border-[#f9f2ed]`}/* aspect-ratio: 1; */
-    /* aspect-square : 가로너비 대비 세로너비 1:1로 설정해줌 */
+    ${tw`w-1/3 aspect-square bg-mainBlue text-white rounded-[50%] border-[5px] border-[#f9f2ed]`}
   }
 
   button:hover {
