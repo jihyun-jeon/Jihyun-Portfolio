@@ -7,18 +7,19 @@ const About = () => {
   const TargetRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    // [질문] 왜 useEffect를 써야하는건지? 이 코드 돌아가는 구체적인 로직 파악필요
-    if (TargetRef.current) {
-      let observer = new IntersectionObserver(
-        ([entry], observer) => {
-          setIsVisible(entry.isIntersecting); // 교차되면 true, 교차 안되면 false 인 것임
-        },
-        { threshold: 0.1 }
-      );
+    let observer = new IntersectionObserver(
+      ([entry], observer) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
 
-      observer.observe(TargetRef.current); //특정 html요소가 등장하는지, 사라지는지 감시할 수 있음.
+    if (TargetRef.current) {
+      observer.observe(TargetRef.current);
     }
-  }, [isVisible]);
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
