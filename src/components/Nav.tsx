@@ -13,25 +13,20 @@ function Nav({ navNumber }: { navNumber: number }) {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", onScroll); // [순서2]home 페이지에서 스크롤 할 때마다 onScroll함수 실행됨
+    window.addEventListener("scroll", onScroll);
 
-    setScrolled(window.scrollY > 20); // [순서1]scoll하기 전에 맨 처음 스크롤위치 값을 넣어주기 위해 - 20px넘은 상태에서 새로고침시 바로 ture를 넣어야 함.
+    setScrolled(window.scrollY > 20);
 
     return () => {
-      window.removeEventListener("scroll", onScroll); // [순서3]그러나 다른 경로로 이동되면 Nav컴포넌트가 unmount되면서 이벤트 제거됨.
+      window.removeEventListener("scroll", onScroll);
     };
   }, []);
 
   const OnClickMenu = (e: React.SyntheticEvent<HTMLAnchorElement>) => {
-    e.preventDefault(); // a태그의 주소이동 막고
-    let MemuData = (e.target as HTMLAnchorElement).innerText;
-    if (MemuData.includes(" ")) {
-      MemuData = MemuData.replace(" ", "-");
-    }
-
-    const IdMatchedPage = document.querySelector(`#${MemuData}`);
+    e.preventDefault();
+    let MemuData = (e.target as HTMLAnchorElement).hash;
+    const IdMatchedPage = document.querySelector(MemuData);
     IdMatchedPage?.scrollIntoView({ behavior: "smooth" });
-    // id를 갖은 요소에 scrollIntoview 걸어야 함
   };
 
   return (
