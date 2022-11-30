@@ -40,31 +40,33 @@ function Laptop() {
 
   return (
     <>
+      {/* 전구 조명 */}
       <pointLight
         castShadow
-        color={"#ffc926"}
-        intensity={5}
-        position={[0.25, 0.3, -0.3]}
+        color={"orange"}
+        intensity={0.5}
+        position={[0.25, 0.3, -0.6]}
         shadow-bias={-0.0005}
         shadow-camera-far={10}
         shadow-mapSize-width={1024}
         shadow-mapSize-height={1024}
       />
-
+      {/* 앞조명 */}
       <pointLight
         castShadow
-        color={"#ffffff"}
-        intensity={0.5}
-        position={[-0.4, 0.3, 0.3]}
+        color={"#f9f2ed"}
+        intensity={0.6}
+        position={[-0.4, 1, 0.2]}
         shadow-bias={-0.0005}
         shadow-camera-far={10}
         shadow-mapSize-width={1024}
         shadow-mapSize-height={1024}
       />
       <Model />
+      {/* 전체 조명 */}
       <ambientLight
-        color={"#ffffff"}
-        intensity={0.5}
+        color={"#f9f2ed"}
+        intensity={0.6}
         shadowBias={-0.0005}
         shadowMapWidth={1024}
         shadowMapHeight={1024}
