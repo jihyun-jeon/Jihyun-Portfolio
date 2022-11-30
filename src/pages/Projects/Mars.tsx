@@ -140,6 +140,14 @@ const Mars = () => {
 
           <Growing GrowingData={GrowingData} />
         </div>
+        <div tw="max-w-[660px] mx-auto my-10">
+          <h1 tw="pt-8 pb-6 text-xl font-bold">동료 평가</h1>
+          <p tw="py-2">
+            같은 프론트엔드 동료의 저에 대한 평가입니다. &#40;출처 :동료 블로그
+            &#41;
+          </p>
+          <img src={"/imgs/harry.png"} alt="musma동료평가" />
+        </div>
       </div>
     </div>
   );

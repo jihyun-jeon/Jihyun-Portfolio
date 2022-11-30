@@ -100,6 +100,22 @@ const AccountApp = () => {
 
           <Growing GrowingData={GrowingData} />
         </div>
+        <div tw="max-w-[660px] mx-auto my-10">
+          <h1 tw="pt-8 pb-6 text-xl font-bold">동료 평가</h1>
+          <p tw="py-2">
+            원티드 프리온보딩 프로그램 수료 후 익명으로 진행한 동료평가 입니다.
+          </p>
+          <img
+            src={`${import.meta.env.BASE_URL}imgs/wanted1.png`}
+            alt="원디드동료평가1"
+            tw="mb-4"
+          />
+
+          <img
+            src={`${import.meta.env.BASE_URL}imgs/wanted2.png`}
+            alt="원디드동료평가2"
+          />
+        </div>
       </div>
     </div>
   );
