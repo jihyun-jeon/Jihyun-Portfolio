@@ -1,8 +1,3 @@
-import {
-  AccumulativeShadows,
-  Environment,
-  RandomizedLight,
-} from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useSpring } from "@react-spring/web";
 import { Vector3 } from "three";
@@ -18,9 +13,9 @@ function Laptop() {
   });
 
   useFrame(({ camera }) => {
-    camera.position.z = spring.mouseX.get();
-    camera.position.y = spring.mouseY.get() * 0.3;
-    camera.lookAt(new Vector3(0, 0.7, 0));
+    camera.position.x = spring.mouseX.get() * 0.05;
+    camera.position.y = spring.mouseY.get() * 0.2;
+    camera.lookAt(new Vector3(0, 0.15, 0));
   });
 
   const onMouseMove = useCallback((e: MouseEvent) => {
@@ -32,10 +27,7 @@ function Laptop() {
     const hh = window.innerHeight / 2;
     const y = 1 - e.clientY / hh;
 
-    setMouseY(-y + 2);
-
-    // setMouseX(e.clientX * 1);
-    // setMouseY(e.clientY * -1 + 2);
+    setMouseY(-y + 3);
   }, []);
 
   useEffect(() => {
@@ -51,8 +43,8 @@ function Laptop() {
       <pointLight
         castShadow
         color={"#ffc926"}
-        intensity={3}
-        position={[1.1, 1.9, 1.3]}
+        intensity={5}
+        position={[0.25, 0.3, -0.3]}
         shadow-bias={-0.0005}
         shadow-camera-far={10}
         shadow-mapSize-width={1024}
@@ -61,40 +53,22 @@ function Laptop() {
 
       <pointLight
         castShadow
-        color={"#01c4f5"}
-        intensity={10}
-        position={[2, 1, 0]}
+        color={"#ffffff"}
+        intensity={0.5}
+        position={[-0.4, 0.3, 0.3]}
         shadow-bias={-0.0005}
         shadow-camera-far={10}
         shadow-mapSize-width={1024}
         shadow-mapSize-height={1024}
       />
-
-      <pointLight
+      <Model />
+      <ambientLight
         color={"#ffffff"}
         intensity={0.5}
-        position={[-3, 1, 3]}
-        shadow-bias={-0.05}
-        shadow-camera-far={10}
-      />
-
-      <Model />
-      <AccumulativeShadows
-        temporal
-        toneMapped={true}
-        frames={100}
-        scale={10}
-        opacity={0.4}
-      >
-        <RandomizedLight
-          amount={8}
-          radius={3}
-          ambient={0.5}
-          position={[6, 4, -2]}
-        />
-      </AccumulativeShadows>
-      <Environment
-        files={`${import.meta.env.BASE_URL}3d/photo_studio_loft_hall_1k.hdr`}
+        shadowBias={-0.0005}
+        shadowMapWidth={1024}
+        shadowMapHeight={1024}
+        shadowCameraFar={10}
       />
     </>
   );

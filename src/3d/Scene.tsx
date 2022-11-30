@@ -1,6 +1,7 @@
 import "twin.macro";
 import { Canvas } from "@react-three/fiber";
 import { lazy, Suspense } from "react";
+import Loader from "./Loader";
 
 const Laptop = lazy(() => import("./Laptop"));
 
@@ -10,9 +11,9 @@ function Scene() {
       <Canvas
         shadows
         gl={{ antialias: true, preserveDrawingBuffer: true }}
-        camera={{ position: [-3.5, 3, 0], fov: 35 }}
+        camera={{ fov: 28, zoom: 3, position: [0, 1, 2] }}
       >
-        <Suspense fallback={null}>
+        <Suspense fallback={<Loader />}>
           <Laptop />
         </Suspense>
       </Canvas>
