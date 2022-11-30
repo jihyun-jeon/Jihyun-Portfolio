@@ -14,7 +14,7 @@ React.js, TypeScript, TailwindCSS, Styled-components, three.js
 
 ## 구현 기능
 
-NAV
+✅ Nav
 
 1. 메뉴 클릭시 페이지 스크롤 처리<br/>
    : React anchor scroll 활용
@@ -26,7 +26,9 @@ NAV
    : IntersectionObserver 기능을 hook으로 만들어 활용 <br/>
    : 특정 요소 교차시 state값을 바꾸어 Nav메뉴에 조건부 스타일링 적용
 
-HOME<br/>
+<br/>
+
+✅ Home<br/>
 
 1. 3D 화면<br/>
    : three.js를 취미로 배워보고 있습니다.
@@ -34,7 +36,9 @@ HOME<br/>
 2. 타이핑 애니메이션 효과<br/>
    : TypeAnimation 라이브러리 활용
 
-PROJECYS<br/>
+<br/>
+
+✅ Projects<br/>
 
 1. 동영상 캐러셀 기능<br/>
    : react-slick 활용 (좌우 화살표, 하단 점표시 css 커스텀하여 사용)<br/>
