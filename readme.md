@@ -8,7 +8,7 @@
 
 ## 사용 기술
 
-React.js, TypeScript, TailwindCSS, Styled-components, three.js
+NextJS, React.js, TypeScript, TailwindCSS, Styled-components, Three.js
 
 <br/>
 

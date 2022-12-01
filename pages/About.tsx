@@ -1,6 +1,7 @@
 import tw from "twin.macro";
 import styled from "styled-components";
 import { useEffect, useRef, useState } from "react";
+import { env } from "process";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -71,7 +72,7 @@ export default About;
 const MyImg = styled.div`
   ${tw`w-1/3 -translate-x-32 opacity-0 transition-all delay-300 duration-500`}
 
-  background-image: url(${import.meta.env.BASE_URL}imgs/jihyunImg.png);
+  background-image: url(${env.BASE_URL}imgs/jihyunImg.png);
 
   &.show {
     ${tw`translate-x-0 opacity-100`}

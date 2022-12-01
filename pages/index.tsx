@@ -1,9 +1,10 @@
+import "twin.macro";
 import tw from "twin.macro";
 import { TypeAnimation } from "react-type-animation";
 import Nav from "../components/Nav";
 import About from "./About";
-import Projects from "./Projects/Projects";
-import ToyProjects from "./Projects/ToyProjects";
+import Projects from "./Projects";
+import ToyProjects from "./ToyProjects";
 import Scene from "../3d/Scene";
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";

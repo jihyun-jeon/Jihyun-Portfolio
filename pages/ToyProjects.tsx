@@ -1,40 +1,47 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 import tw from "twin.macro";
 import styled from "styled-components";
-import LinkIcon from "../../components/LinkIcon";
-import { Label } from "../../components/Label";
-import { Link } from "react-router-dom";
+import { Label } from "../components/Label";
+import Image from "next/image";
+import { env } from "process";
 
 function ToyProjects() {
-  const navigate = useNavigate();
+  const navigate = useRouter();
 
   const onClickProject = (e: React.MouseEvent<HTMLDivElement>) => {
     const value = (e.currentTarget as HTMLDivElement).dataset.value;
 
     if (value) {
-      navigate(value);
+      navigate.push(value);
     }
   };
 
   return (
-    <>
+    <div>
       <h1 tw="flex justify-center font-semibold text-4xl text-mainBlue">
         Toy Projects
       </h1>
       <div tw="px-36 grid my-10 gap-8 grid-cols-[1fr_minmax(350px,_1fr)]">
         <Card>
           <div tw="h-full overflow-hidden">
-            <img src={`${import.meta.env.BASE_URL}imgs/portfolio.png`} />
+            <Image
+              src={`/imgs/portfolio.png`}
+              alt="포트폴리오사이트"
+              width={430}
+              height={300}
+            />
           </div>
           <div tw="py-1 px-3">
-            <p tw="font-bold   py-1 flex justify-between">
+            <div tw="font-bold   py-1 flex justify-between">
               <span tw="text-mainBlue">포트폴리오 사이트</span>
               <li tw="flex">
                 <ToyLabel>
                   <a
                     href="https://github.com/jihyun-jeon/portfolio"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     📍 git
                   </a>
@@ -44,19 +51,20 @@ function ToyProjects() {
                   <a
                     href="https://velog.io/@jhplus13/series/TIL"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     📍 개발노트
                   </a>
                 </ToyLabel>
               </li>
-            </p>
-            <p>
+            </div>
+            <div>
               <Label txt="React.js" color="blue" />
               <Label txt="Typescript" color="green" />
               <Label txt="Tailwind" color="violet" />
               <Label txt="Styled-component" color="rosy" />
-            </p>
-            <p tw="pt-3">현재 포트폴리오 사이트 입니다.</p>
+            </div>
+            <div tw="pt-3">현재 포트폴리오 사이트 입니다.</div>
           </div>
         </Card>
         <Card>
@@ -64,18 +72,25 @@ function ToyProjects() {
             <a
               href={"https://jihyun-jeon.github.io/instargram/"}
               target="_blank"
+              rel="noreferrer"
             >
-              <img src={`${import.meta.env.BASE_URL}imgs/instargramBg.gif`} />
+              <Image
+                src={`/imgs/instargramBg.gif`}
+                alt="인스타그램사진"
+                width={430}
+                height={300}
+              />
             </a>
           </div>
           <div tw="py-1 px-3">
-            <p tw="font-bold   py-1 flex justify-between">
+            <div tw="font-bold   py-1 flex justify-between">
               <span tw="text-mainBlue"> Instargram</span>
               <li tw="flex">
                 <ToyLabel>
                   <a
                     href="https://github.com/jihyun-jeon/instargram"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     📍 git
                   </a>
@@ -85,12 +100,13 @@ function ToyProjects() {
                   <a
                     href="https://velog.io/@jhplus13/%EC%9C%84%EC%8A%A4%ED%83%80%EA%B7%B8%EB%9E%A8-%EA%B0%9C%EB%B0%9C%EB%85%B8%EB%93%9CReact"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     📍 개발노트
                   </a>
                 </ToyLabel>
               </li>
-            </p>
+            </div>
             <p>
               <Label txt="React.js" color="blue" />
               <Label txt="SCSS" color="violet" />
@@ -102,7 +118,7 @@ function ToyProjects() {
           </div>
         </Card>
       </div>
-    </>
+    </div>
   );
 }
 
