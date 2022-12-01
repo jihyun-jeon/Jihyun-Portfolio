@@ -2,6 +2,7 @@ import "twin.macro";
 import { Canvas } from "@react-three/fiber";
 import { lazy, Suspense } from "react";
 import Loader from "./Loader";
+import React from "react";
 
 const Laptop = lazy(() => import("./Laptop"));
 

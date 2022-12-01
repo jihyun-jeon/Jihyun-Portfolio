@@ -1,5 +1,6 @@
 import "twin.macro";
 import Image from "next/image";
+import React from "react";
 
 const LinkIcon = ({ txt, url }: { txt: string; url: string }) => {
   return (

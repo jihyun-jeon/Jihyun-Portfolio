@@ -41,6 +41,10 @@ function Projects() {
               <Label txt="Tailwind" color="violet" />
               <Label txt="Javascript" color="yellow" />
             </p>
+            <p tw="pt-4 leading-[1.7rem]">
+              (주)무스마에서 입턴십을 하며 진행한 프로젝트.
+              <br /> 실서비스의 가치를 이해하고 그 가치를 코드로 구현했습니다.
+            </p>
           </div>
         </Card>
         <Card data-value="account" onClick={onClickProject}>
@@ -61,6 +65,10 @@ function Projects() {
               <Label txt="Tailwind" color="violet" />
               <Label txt="Antd" color="violet" />
             </p>
+            <p tw="pt-4 leading-[1.7rem]">
+              원티드 프리온보딩 프로그램에 참여하여 진행한 프로젝트.
+              <br /> 동료들과 best practice를 찾아가며 진행하였습니다.
+            </p>
           </div>
         </Card>
 
@@ -79,6 +87,9 @@ function Projects() {
               <Label txt="React.js" color="blue" />
               <Label txt="Styled-component" color="violet" />
               <Label txt="HTML" color="yellow" />
+            </p>
+            <p tw="pt-4 leading-[1.7rem]">
+              제주지역 숙소 예약 및 검색 사이트 입니다.
             </p>
           </div>
         </Card>
@@ -101,6 +112,7 @@ function Projects() {
               <Label txt="SCSS" color="violet" />
               <Label txt="HTML" color="yellow" />
             </p>
+            <p tw="pt-4 leading-[1.7rem]">신발 이커머스 사이트 입니다.</p>
           </div>
         </Card>
       </div>
@@ -111,7 +123,7 @@ function Projects() {
 export default Projects;
 
 const Card = styled.div`
-  ${tw`border-2 border-solid border-neutral-200 rounded-md h-72 grid grid-rows-[75%_25%] bg-gray-100`}
+  ${tw`border-2 border-solid border-neutral-200 rounded-md h-[21rem] grid grid-rows-[60%_40%] bg-gray-100`}
 
   &:hover {
     ${tw`cursor-pointer`}

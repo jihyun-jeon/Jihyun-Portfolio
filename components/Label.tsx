@@ -1,4 +1,5 @@
 import tw, { TwStyle } from "twin.macro";
+import React from "react";
 
 type colorTypes = "blue" | "rosy" | "violet" | "green" | "yellow";
 

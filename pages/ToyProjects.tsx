@@ -1,5 +1,4 @@
 import React from "react";
-// import { useNavigate } from "react-router-dom";
 import { useRouter } from "next/router";
 import tw from "twin.macro";
 import styled from "styled-components";
@@ -8,16 +7,6 @@ import Image from "next/image";
 import { env } from "process";
 
 function ToyProjects() {
-  const navigate = useRouter();
-
-  const onClickProject = (e: React.MouseEvent<HTMLDivElement>) => {
-    const value = (e.currentTarget as HTMLDivElement).dataset.value;
-
-    if (value) {
-      navigate.push(value);
-    }
-  };
-
   return (
     <div>
       <h1 tw="flex justify-center font-semibold text-4xl text-mainBlue">
@@ -59,12 +48,16 @@ function ToyProjects() {
               </li>
             </div>
             <div>
+              <Label txt="NextJS" color="rosy" />
               <Label txt="React.js" color="blue" />
               <Label txt="Typescript" color="green" />
-              <Label txt="Tailwind" color="violet" />
-              <Label txt="Styled-component" color="rosy" />
+              <Label txt="Styled-component" color="violet" />
             </div>
-            <div tw="pt-3">현재 포트폴리오 사이트 입니다.</div>
+            <div tw="pt-3">
+              현재 포트폴리오 사이트 입니다.
+              <br />
+              React로 작업 후 NextJS로 마이그래이션 하였습니다.
+            </div>
           </div>
         </Card>
         <Card>
@@ -125,7 +118,7 @@ function ToyProjects() {
 export default ToyProjects;
 
 const Card = styled.div`
-  ${tw`border-2 border-solid border-neutral-200 rounded-md h-80 grid grid-rows-[65%_35%] bg-gray-100`}
+  ${tw`border-2 border-solid border-neutral-200 rounded-md h-[22rem] grid grid-rows-[60%_40%] bg-gray-100`}
 
   &:hover {
     ${tw`cursor-pointer`}

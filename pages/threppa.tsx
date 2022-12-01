@@ -7,6 +7,7 @@ import LinkIcon from "../components/LinkIcon";
 import Growing from "../components/Growing";
 import { env } from "process";
 import { ProjectWrapper } from "../components/ProjectWrapper";
+import React from "react";
 
 const Threppa = () => {
   return (
@@ -32,7 +33,8 @@ const Threppa = () => {
           <InfoList>
             <li tw="font-bold mb-2">서비스 소개</li>
             <li>
-              이 서비스는 Crocs 사이트를 모티브하여 진행한 프로젝트 입니다.
+              이 서비스는 crocs 사이트를 모티브하여 진행한 신발 이커머스 사이트
+              입니다.
             </li>
           </InfoList>
           <InfoList>

@@ -3,6 +3,7 @@ import { useSpring } from "@react-spring/web";
 import { Vector3 } from "three";
 import Model from "./Model";
 import { useCallback, useEffect, useState } from "react";
+import React from "react";
 
 function Laptop() {
   const [mouseX, setMouseX] = useState(0);

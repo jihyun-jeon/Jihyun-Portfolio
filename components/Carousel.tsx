@@ -7,6 +7,7 @@ import {
 } from "react-icons/io";
 import { IconContext } from "react-icons";
 import { styled } from "twin.macro";
+import React from "react";
 
 type CarouselDataType = { CarouselData: { title: string; url: string }[] };
 
