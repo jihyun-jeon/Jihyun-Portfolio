@@ -5,6 +5,8 @@ import Carousel from "../../components/Carousel";
 import Accordion from "../../components/Accordion";
 import LinkIcon from "../../components/LinkIcon";
 import Growing from "../../components/Growing";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 const Mars = () => {
   return (
@@ -146,10 +148,12 @@ const Mars = () => {
             같은 프론트엔드 동료의 저에 대한 평가입니다. &#40;출처 :동료 블로그
             &#41;
           </p>
-          <img
-            src={`${import.meta.env.BASE_URL}imgs/harry.png`}
-            alt="musma동료평가"
-          />
+          <Zoom>
+            <img
+              src={`${import.meta.env.BASE_URL}imgs/harry.png`}
+              alt="musma동료평가"
+            />
+          </Zoom>
         </div>
       </div>
     </div>

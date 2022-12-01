@@ -5,6 +5,8 @@ import Carousel from "../../components/Carousel";
 import Accordion from "../../components/Accordion";
 import LinkIcon from "../../components/LinkIcon";
 import Growing from "../../components/Growing";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 const AccountApp = () => {
   return (
@@ -105,16 +107,19 @@ const AccountApp = () => {
           <p tw="py-2">
             원티드 프리온보딩 프로그램 수료 후 익명으로 진행한 동료평가 입니다.
           </p>
-          <img
-            src={`${import.meta.env.BASE_URL}imgs/wanted1.png`}
-            alt="원디드동료평가1"
-            tw="mb-4"
-          />
-
-          <img
-            src={`${import.meta.env.BASE_URL}imgs/wanted2.png`}
-            alt="원디드동료평가2"
-          />
+          <Zoom>
+            <img
+              src={`${import.meta.env.BASE_URL}imgs/wanted1.png`}
+              alt="원디드동료평가1"
+              tw="mb-4"
+            />
+          </Zoom>
+          <Zoom>
+            <img
+              src={`${import.meta.env.BASE_URL}imgs/wanted2.png`}
+              alt="원디드동료평가2"
+            />
+          </Zoom>
         </div>
       </div>
     </div>

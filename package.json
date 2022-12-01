@@ -48,6 +48,7 @@
     }
   },
   "dependencies": {
-    "react-intersection-observer-hook": "^2.0.6"
+    "react-intersection-observer-hook": "^2.0.6",
+    "react-medium-image-zoom": "^5.1.2"
   }
 }
