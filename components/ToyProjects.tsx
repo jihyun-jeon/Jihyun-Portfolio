@@ -2,9 +2,8 @@ import React from "react";
 import { useRouter } from "next/router";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { Label } from "../components/Label";
+import { Label } from "./Label";
 import Image from "next/image";
-import { env } from "process";
 
 function ToyProjects() {
   return (
@@ -16,7 +15,7 @@ function ToyProjects() {
         <Card>
           <div tw="h-full overflow-hidden">
             <Image
-              src={`/imgs/portfolio.png`}
+              src={`${process.env.BASE_URL}/imgs/portfolio.png`}
               alt="포트폴리오사이트"
               width={430}
               height={300}
@@ -68,7 +67,7 @@ function ToyProjects() {
               rel="noreferrer"
             >
               <Image
-                src={`/imgs/instargramBg.gif`}
+                src={`${process.env.BASE_URL}/imgs/instargramBg.gif`}
                 alt="인스타그램사진"
                 width={430}
                 height={300}

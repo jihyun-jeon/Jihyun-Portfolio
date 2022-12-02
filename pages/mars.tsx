@@ -6,7 +6,6 @@ import Accordion from "../components/Accordion";
 import LinkIcon from "../components/LinkIcon";
 import Growing from "../components/Growing";
 import Image from "next/image";
-import { env } from "process";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import { ProjectWrapper } from "../components/ProjectWrapper";
@@ -135,7 +134,7 @@ const Mars = () => {
                   그릴 수 있었습니다.
                 </div>
                 <Image
-                  src={`/imgs/components.png`}
+                  src={`${process.env.BASE_URL}/imgs/components.png`}
                   tw="w-full h-96 mt-2"
                   alt="componentImg"
                   width={1750}
@@ -158,7 +157,7 @@ const Mars = () => {
             </p>
             <Zoom>
               <Image
-                src={`/imgs/harry.png`}
+                src={`${process.env.BASE_URL}/imgs/harry.png`}
                 alt="musma동료평가"
                 width={1620}
                 height={770}

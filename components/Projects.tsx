@@ -2,9 +2,8 @@ import React from "react";
 import { useRouter } from "next/router";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { Label } from "../components/Label";
+import { Label } from "./Label";
 import Image from "next/image";
-import { env } from "process";
 
 function Projects() {
   const navigate = useRouter();
@@ -26,7 +25,7 @@ function Projects() {
         <Card data-value="mars" onClick={onClickProject}>
           <div tw="h-full overflow-hidden">
             <Image
-              src={`/imgs/musmaBg.png`}
+              src={`${process.env.BASE_URL}/imgs/musmaBg.png`}
               alt="mars이미지"
               width={430}
               height={300}
@@ -50,7 +49,7 @@ function Projects() {
         <Card data-value="account" onClick={onClickProject}>
           <div tw="h-full overflow-hidden">
             <Image
-              src={`/imgs/accountBg.png`}
+              src={`${process.env.BASE_URL}/imgs/accountBg.png`}
               alt="accountApp"
               width={430}
               height={300}
@@ -75,7 +74,7 @@ function Projects() {
         <Card data-value="airbnb" onClick={onClickProject}>
           <div tw="h-full overflow-hidden">
             <Image
-              src={`/imgs/airbnbBg.png`}
+              src={`${process.env.BASE_URL}/imgs/airbnbBg.png`}
               alt="airbnb"
               width={430}
               height={300}
@@ -97,7 +96,7 @@ function Projects() {
         <Card data-value="threppa" onClick={onClickProject}>
           <div tw="h-full overflow-hidden">
             <Image
-              src={`/imgs/threppaBg.png`}
+              src={`${process.env.BASE_URL}/imgs/threppaBg.png`}
               alt="threppa"
               width={430}
               height={300}

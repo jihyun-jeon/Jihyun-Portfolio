@@ -8,7 +8,7 @@ const LinkIcon = ({ txt, url }: { txt: string; url: string }) => {
       {txt === "git" ? (
         <Image
           tw="w-6 h-6 align-[-0.15rem] rounded-[3px] mr-1"
-          src={"/imgs/github-icon.png"}
+          src={`${process.env.BASE_URL}/imgs/github-icon.png`}
           alt="gitIcon"
           width={24}
           height={24}
@@ -16,7 +16,7 @@ const LinkIcon = ({ txt, url }: { txt: string; url: string }) => {
       ) : (
         <Image
           tw="w-6 h-6 align-[-0.15rem] rounded-[3px] mr-1"
-          src={`/imgs/note.png`}
+          src={`${process.env.BASE_URL}/imgs/note.png`}
           alt="noteIcon"
           width={24}
           height={24}

@@ -5,7 +5,7 @@ import Carousel from "../components/Carousel";
 import Accordion from "../components/Accordion";
 import LinkIcon from "../components/LinkIcon";
 import Growing from "../components/Growing";
-import { env } from "process";
+
 import { ProjectWrapper } from "../components/ProjectWrapper";
 import React from "react";
 
@@ -145,7 +145,7 @@ const CarouselData = [
   },
   {
     title: "Nav bar, Side menu",
-    url: `${env.BASE_URL}imgs/threppaMenu.png`,
+    url: `${process.env.BASE_URL}/imgs/threppaMenu.png`,
   },
 ];
 

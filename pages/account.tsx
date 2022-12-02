@@ -6,7 +6,6 @@ import Accordion from "../components/Accordion";
 import LinkIcon from "../components/LinkIcon";
 import Growing from "../components/Growing";
 import Image from "next/image";
-import { env } from "process";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import { ProjectWrapper } from "../components/ProjectWrapper";
@@ -116,7 +115,7 @@ const AccountApp = () => {
             </p>
             <Zoom>
               <Image
-                src={`/imgs/wanted1.png`}
+                src={`${process.env.BASE_URL}/imgs/wanted1.png`}
                 alt="원디드동료평가1"
                 tw="mb-4"
                 width={1690}
@@ -125,7 +124,7 @@ const AccountApp = () => {
             </Zoom>
             <Zoom>
               <Image
-                src={`/imgs/wanted2.png`}
+                src={`${process.env.BASE_URL}/imgs/wanted2.png`}
                 alt="원디드동료평가2"
                 width={1690}
                 height={1450}
@@ -159,15 +158,15 @@ const InfoList = styled.ul`
 const CarouselData = [
   {
     title: "계좌 리스트 페이지",
-    url: `/imgs/account-list.gif`,
+    url: `${process.env.BASE_URL}/imgs/account-list.gif`,
   },
   {
     title: "사용자 상세 페이지",
-    url: `/imgs/accountDetail.png`,
+    url: `${process.env.BASE_URL}/imgs/accountDetail.png`,
   },
   {
     title: "React Hook Form 라이브러리를 활용한 로그인 구현",
-    url: `/imgs/account-login.gif`,
+    url: `${process.env.BASE_URL}/imgs/account-login.gif`,
   },
 ];
 

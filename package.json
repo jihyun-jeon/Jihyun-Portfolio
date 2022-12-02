@@ -1,4 +1,5 @@
 {
+  "homepage": "https://jihyun-jeon.github.io/portfolio",
   "name": "portfolio-next",
   "version": "0.1.0",
   "private": true,
@@ -7,7 +8,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export"
+    "export": "next export",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out -t true",
+    "static": "next build && next export && touch ./out/.nojekyll"
   },
   "dependencies": {
     "@react-spring/web": "^9.5.5",
@@ -43,6 +47,5 @@
     "twin": {
       "preset": "styled-components"
     }
-  },
-  "homepage": "https://jihyun-jeon.github.io/portfolio/"
+  }
 }
