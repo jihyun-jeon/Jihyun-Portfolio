@@ -7,7 +7,6 @@ import Script from "next/script";
 
 // 클라이언트에서 - html파일을 만들때 html의 wrapper임
 function MyApp({ Component, pageProps }: AppProps) {
-  // GA 설정 시작
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url: any) => {
@@ -20,7 +19,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       router.events.off("hashChangeComplete", handleRouteChange);
     };
   }, [router.events]);
-  // GA 설정 끝
 
   // scroll restoration
   useEffect(() => {

@@ -19,6 +19,7 @@ function ToyProjects() {
               alt="포트폴리오사이트"
               width={430}
               height={300}
+              loading="lazy"
             />
           </div>
           <div tw="py-1 px-3">
@@ -71,6 +72,7 @@ function ToyProjects() {
                 alt="인스타그램사진"
                 width={430}
                 height={300}
+                loading="lazy"
               />
             </a>
           </div>
