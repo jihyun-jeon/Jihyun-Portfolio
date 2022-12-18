@@ -29,7 +29,6 @@ function Projects() {
               alt="mars이미지"
               width={430}
               height={300}
-              loading="lazy"
             />
           </div>
           <div tw="py-1 px-2">
@@ -54,7 +53,6 @@ function Projects() {
               alt="accountApp"
               width={430}
               height={300}
-              loading="lazy"
             />
           </div>
           <div tw="py-1 px-2">
@@ -80,7 +78,6 @@ function Projects() {
               alt="airbnb"
               width={430}
               height={300}
-              loading="lazy"
             />
           </div>
           <div tw="py-1 px-2">
@@ -103,7 +100,6 @@ function Projects() {
               alt="threppa"
               width={430}
               height={300}
-              loading="lazy"
             />
           </div>
           <div tw="py-1 px-2">
