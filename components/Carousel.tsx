@@ -20,7 +20,9 @@ const Carousel = ({ CarouselData }: CarouselDataType) => {
     slidesToScroll: 1,
     lazyLoad: "anticipated",
     prevArrow: (
-      <IconContext.Provider value={{ color: "lightgray", size: "30px" }}>
+      <IconContext.Provider
+        value={{ color: "black", size: "30px", className: "arrows" }}
+      >
         <div onClick={() => sliderRef?.current?.slickPrev()} tw="mr-5">
           <IoMdArrowDropleftCircle />
         </div>
@@ -28,7 +30,9 @@ const Carousel = ({ CarouselData }: CarouselDataType) => {
     ),
 
     nextArrow: (
-      <IconContext.Provider value={{ color: "lightgray", size: "30px" }}>
+      <IconContext.Provider
+        value={{ color: "black", size: "30px", className: "arrows" }}
+      >
         <div onClick={() => sliderRef?.current?.slickNext()} tw="ml-5">
           <IoMdArrowDroprightCircle />
         </div>
@@ -36,7 +40,7 @@ const Carousel = ({ CarouselData }: CarouselDataType) => {
     ),
   };
 
-  const sliderRef = useRef<Slider | null>(null); // [타입질문]
+  const sliderRef = useRef<Slider | null>(null);
 
   return (
     <SliderWrapper>
@@ -67,7 +71,7 @@ const Carousel = ({ CarouselData }: CarouselDataType) => {
                 frameBorder="1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-              ></iframe>
+              />
             )}
           </div>
         ))}
@@ -77,6 +81,10 @@ const Carousel = ({ CarouselData }: CarouselDataType) => {
 };
 
 const SliderWrapper = styled.div`
+  .arrows {
+    cursor: pointer;
+  }
+
   .slick-slider {
     display: flex;
     align-items: center;

@@ -11,6 +11,7 @@ function Scene() {
     <div tw="w-full pt-[10vh] h-[50vh]">
       <Canvas
         shadows
+        //preserveDrawingBuffer 캔버스 초기화 방지(브라우저가 캔버스 지우는거 방지)
         gl={{ antialias: true, preserveDrawingBuffer: true }}
         camera={{ fov: 28, zoom: 3, position: [0, 1, 2] }}
       >

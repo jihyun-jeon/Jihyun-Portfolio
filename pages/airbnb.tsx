@@ -39,7 +39,7 @@ const AirbnbApp = () => {
           <InfoList>
             <li tw="font-bold mb-2">사용 스택</li>
             <li>
-              <Label txt="React.js" color="blue" />
+              <Label txt="React" color="blue" />
               <Label txt="styled-components" color="violet" />
               <Label txt="HTML" color="yellow" />
             </li>

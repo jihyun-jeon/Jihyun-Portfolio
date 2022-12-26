@@ -5,7 +5,7 @@ import { OneLineBreaking, SeveralLineBreaking } from "../util/LineBreaking";
 const Growing = ({ GrowingData }: { GrowingData: string[][] }) => {
   const [clickValue, setClickValue] = useState(0);
 
-  const onClickCircle = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const onMouseCircle = (e: React.MouseEvent<HTMLButtonElement>) => {
     const { value } = e.currentTarget;
     setClickValue(+value);
   };
@@ -19,7 +19,7 @@ const Growing = ({ GrowingData }: { GrowingData: string[][] }) => {
               type="button"
               key={idx}
               value={idx}
-              onClick={onClickCircle}
+              onMouseEnter={onMouseCircle}
               dangerouslySetInnerHTML={{ __html: OneLineBreaking(itemData[0]) }}
               className={clickValue === idx ? "btnClicked" : ""}
             ></button>

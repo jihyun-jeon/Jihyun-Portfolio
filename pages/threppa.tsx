@@ -42,7 +42,7 @@ const Threppa = () => {
             <li>
               <Label txt="HTML" color="violet" />
               <Label txt="SCSS" color="green" />
-              <Label txt="React.js" color="blue" />
+              <Label txt="React" color="blue" />
             </li>
           </InfoList>
           <InfoList>

@@ -10,12 +10,12 @@ import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import { ProjectWrapper } from "../components/ProjectWrapper";
 
-const Mars = () => {
+const PortfolioToy = () => {
   return (
     <ProjectWrapper>
       <div tw="max-w-3xl mx-auto">
         <h1 tw="w-full font-bold mb-5 text-3xl flex justify-between">
-          MARS &#40;실시간 장비 모니터링 시스템&#41;
+          Portfolio
         </h1>
         <div tw="my-12">
           <InfoList>
@@ -23,59 +23,46 @@ const Mars = () => {
             <li tw="flex">
               <LinkIcon
                 txt="git"
-                url="https://github.com/jihyun-jeon/Mars-monitoring-system"
+                url="https://github.com/jihyun-jeon/portfolio"
               />
 
               <LinkIcon
                 txt="개발노트"
-                url="https://velog.io/@jhplus13/MARS-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Management-Automated-Reporting-System"
+                url="https://velog.io/@jhplus13/series/TIL"
               />
             </li>
           </InfoList>
           <InfoList>
             <li tw="font-bold mb-8">서비스 소개</li>
             <li>
-              이 서비스는 공사현장 관리자를 위한
-              <span tw="font-semibold pl-1 text-mainOrange">
-                실시간 장비 모니터링 시스템
-              </span>
-              이며,
+              현재 포트폴리오 사이트 입니다.
               <br />
-              <span tw="font-semibold pl-1 text-mainOrange">
-                기획부터 앱 제작까지
-              </span>
-              모두 주도적으로 담당하였습니다.
+              React로 작업 후 NextJS로 마이그레이션 하였습니다.
             </li>
           </InfoList>
           <InfoList>
             <li tw="font-bold mb-2">사용 스택</li>
             <li>
+              <Label txt="Next.js" color="rosy" />
               <Label txt="React" color="blue" />
               <Label txt="Typescript" color="green" />
-              <Label txt="MobX" color="rosy" />
               <Label txt="Tailwind" color="violet" />
+              <Label txt="Styled-component" color="violet" />
               <Label txt="Javascript" color="yellow" />
             </li>
           </InfoList>
-          <InfoList>
-            <li tw="font-bold mb-2">기간</li>
-            <li>2022. 07. 18 ~ 2022. 08. 11 (4주)</li>
-          </InfoList>
+
           <InfoList>
             <li tw="font-bold mb-2">팀 구성</li>
-            <li>프론트엔드 2명, 백엔드 2명</li>
+            <li>개인 프로젝트 (프론트엔드 1명)</li>
           </InfoList>
         </div>
-        <Carousel CarouselData={CarouselData} />
+        {/* <Carousel CarouselData={CarouselData} /> */}
         <div tw="my-20">
           <div tw="max-w-[660px] mx-auto">
             <h1 tw="py-8 text-xl font-bold">개발 내용</h1>
 
-            <Accordion
-              CarouselTitle={
-                "1. Google Maps Javascript API 연동 장비 현황도 구현"
-              }
-            >
+            <Accordion CarouselTitle={"1. lazyload를 활용한 성능 최적화"}>
               <div>
                 <div tw="mb-6">
                   이 서비스는 해외 공사 현장에서도 사용될 것을 고려했기 때문에,
@@ -113,7 +100,7 @@ const Mars = () => {
                 </div>
               </div>
             </Accordion>
-            <Accordion CarouselTitle={"2. Context API를 이용한 Toast 메시지"}>
+            <Accordion CarouselTitle={"2. IntersectionObserver"}>
               <div tw="mb-6">
                 Context API를 이용하여 toast 메시지를 전역으로 두어, 다른 팀원이
                 구현하는 페이지에서도 같이 사용할 수 있도록 하였습니다.
@@ -133,13 +120,6 @@ const Mars = () => {
                   <br />이 결과 한 컴포넌트를 사용해도 상황에 맞는 별도의 UI를
                   그릴 수 있었습니다.
                 </div>
-                <Image
-                  src={`${process.env.BASE_URL}/imgs/components.png`}
-                  tw="w-full h-96 mt-2"
-                  alt="componentImg"
-                  width={1750}
-                  height={980}
-                />
               </div>
             </Accordion>
           </div>
@@ -149,28 +129,13 @@ const Mars = () => {
 
             <Growing GrowingData={GrowingData} />
           </div>
-          <div tw="max-w-[660px] mx-auto my-10">
-            <h1 tw="pt-8 pb-6 text-xl font-bold">동료 평가</h1>
-            <p tw="py-2">
-              같은 프론트엔드 동료의 저에 대한 평가입니다. &#40;출처 :동료
-              블로그 &#41;
-            </p>
-            <Zoom>
-              <Image
-                src={`${process.env.BASE_URL}/imgs/harry.png`}
-                alt="musma동료평가"
-                width={1620}
-                height={770}
-              />
-            </Zoom>
-          </div>
         </div>
       </div>
     </ProjectWrapper>
   );
 };
 
-export default Mars;
+export default PortfolioToy;
 
 const InfoList = styled.ul`
   ${tw`grid grid-cols-[100px_minmax(100px,_1fr)] mb-2 leading-6`}
@@ -202,11 +167,11 @@ const CarouselData = [
 
 const GrowingData = [
   [
-    "주도적으로 진행한 기획",
-    "구현해야 할 기능 명세만 텍스트로 주어진 상태에서 기획부터 앱 제작까지 하였습니다.\n<br/>도메인이 낯설어 서비스 이해를 위해 <b>적극적으로 질문</b>을 하였고, 사용자가 원하는 니즈가 무엇인지까지 끊임없이 생각하였습니다.\n<br/>이 경험을 통해 단순 기능 구현이 아닌 <b>서비스의 가치를 파악하고 그 가치를 코드로 구현 해보는 경험</b>을 하였고, 코딩은 어떠한 가치를 창출하기 위한 수단이라는 생각이 들었습니다.",
+    "SSR 경험",
+    "server에서 만든  와 client에서 만들어지는 dom tree가 달라서 React Hydration Error 오류가 났습니다. \n 이 에러를 해결하면서 server에서 만드는 dom tree의 최상위 객체는 window가 아니기 때문에 ssr 또는 csr 에서만 렌더링되는 로직은 제거해야 한다는 것을 알았습니다.",
   ],
   [
-    "원만한 대화를 통한\n의견 조율",
+    "사이트 성능 측정 경험",
     "MobX를 사용하는데 있어서 다른 팀원과 각자 추구하는 방식이 달랐습니다.\n<br/>때문에 각자가 선호하는 방법을 서로에게 설명하는 시간을 가졌고 또한 구글링을 통해 두 방식은 테스트 할 때에 차이를 보인다는 것을 알아냈습니다.\n이 프로젝트는 테스트는 진행하지 않았고 다른 팀원이 상태 관리 셋팅을 담당하기로 했기 때문에 팀원을 믿고 팀원의 결정대로 방식을 결정하였습니다.\n<br/>저는 상대와 의견 충돌이 있을 때 <b>동료의 의견이 옳을 수 있다는 열린 마음</b>을 갖고\n동료와의 <b>충분한 상의</b>를 통해 원만히 해결해 나갈 것입니다.",
   ],
   [

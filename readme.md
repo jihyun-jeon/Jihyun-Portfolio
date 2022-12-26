@@ -42,7 +42,7 @@ NextJS, React.js, TypeScript, TailwindCSS, Styled-components, Three.js
 
 1. 동영상 캐러셀 기능<br/>
    : react-slick 활용 (좌우 화살표, 하단 점표시 css 커스텀하여 사용)<br/>
-   : preLoad를 활용한 슬라이드시 동영상 로딩 속도 개선
+   : lazyLoad를 활용한 슬라이드시 동영상 로딩 속도 개선
 
 2. 반복되는 컴포넌트 분리<br/>
    : Card, Accordion, Growing 등

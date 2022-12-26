@@ -1,18 +1,20 @@
 import React from "react";
-import { useRouter } from "next/router";
+import { useCardRoute } from "../hooks/useCardRoute";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { Label } from "./Label";
 import Image from "next/image";
 
 function ToyProjects() {
+  const onClickProject = useCardRoute();
+
   return (
     <div>
       <h1 tw="flex justify-center font-semibold text-4xl text-mainBlue">
         Toy Projects
       </h1>
       <div tw="px-36 grid my-10 gap-8 grid-cols-[1fr_minmax(350px,_1fr)]">
-        <Card>
+        <Card data-value="portfolio-toy" onClick={(e) => onClickProject(e)}>
           <div tw="h-full overflow-hidden">
             <Image
               src={`${process.env.BASE_URL}/imgs/portfolio.png`}
@@ -22,41 +24,16 @@ function ToyProjects() {
             />
           </div>
           <div tw="py-1 px-3">
-            <div tw="font-bold   py-1 flex justify-between">
+            <div tw="font-bold   py-2 flex justify-between">
               <span tw="text-mainBlue">포트폴리오 사이트</span>
-              <li tw="flex">
-                <ToyLabel>
-                  <a
-                    href="https://github.com/jihyun-jeon/portfolio"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    📍 git
-                  </a>
-                </ToyLabel>
-
-                <ToyLabel>
-                  <a
-                    href="https://velog.io/@jhplus13/series/TIL"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    📍 개발노트
-                  </a>
-                </ToyLabel>
-              </li>
             </div>
             <div>
               <Label txt="NextJS" color="rosy" />
-              <Label txt="React.js" color="blue" />
+              <Label txt="React" color="blue" />
               <Label txt="Typescript" color="green" />
               <Label txt="Styled-component" color="violet" />
             </div>
-            <div tw="pt-3">
-              현재 포트폴리오 사이트 입니다.
-              <br />
-              React로 작업 후 NextJS로 마이그래이션 하였습니다.
-            </div>
+            <div tw="pt-3">현재 포트폴리오 사이트 입니다.</div>
           </div>
         </Card>
         <Card>
@@ -75,7 +52,7 @@ function ToyProjects() {
             </a>
           </div>
           <div tw="py-1 px-3">
-            <div tw="font-bold   py-1 flex justify-between">
+            <div tw="font-bold   py-2 flex justify-between">
               <span tw="text-mainBlue"> Instargram</span>
               <li tw="flex">
                 <ToyLabel>
@@ -100,7 +77,7 @@ function ToyProjects() {
               </li>
             </div>
             <p>
-              <Label txt="React.js" color="blue" />
+              <Label txt="React" color="blue" />
               <Label txt="SCSS" color="violet" />
               <Label txt="HTML" color="yellow" />
             </p>

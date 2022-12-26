@@ -1,13 +1,16 @@
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import GlobalStyles from "../styles/GlobalStyles";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import * as gtag from "../lib/gtag";
 import Script from "next/script";
 
-// 클라이언트에서 - html파일을 만들때 html의 wrapper임
+// 클라이언트에서 - html파일을 만들때 html의 wrapper
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
+
+  // <GA 설정>
   useEffect(() => {
     const handleRouteChange = (url: any) => {
       gtag.pageview(url);
@@ -20,11 +23,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     };
   }, [router.events]);
 
-  // scroll restoration
+  // <scroll restoration>
   useEffect(() => {
     window.history.scrollRestoration = "auto";
 
     const cacheScrollPositions: Array<[number, number]> = [];
+
     let shouldScrollRestore: null | { x: number; y: number };
 
     router.events.on("routeChangeStart", () => {
@@ -78,6 +82,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         }}
       />
       {/* GA 설정 끝 */}
+      <Head>
+        <title>Hello Jihyun</title>
+      </Head>
       <GlobalStyles />
       <Component {...pageProps} />
     </>

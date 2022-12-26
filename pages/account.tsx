@@ -40,7 +40,7 @@ const AccountApp = () => {
           <InfoList>
             <li tw="font-bold mb-2">사용 스택</li>
             <li>
-              <Label txt="React.js" color="blue" />
+              <Label txt="React" color="blue" />
               <Label txt="Redux-toolkit" color="rosy" />
               <Label txt="Axios" color="yellow" />
               <Label txt="Tailwind CSS" color="violet" />

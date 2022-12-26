@@ -1,20 +1,12 @@
 import React from "react";
-import { useRouter } from "next/router";
+import { useCardRoute } from "../hooks/useCardRoute";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { Label } from "./Label";
 import Image from "next/image";
 
 function Projects() {
-  const navigate = useRouter();
-
-  const onClickProject = (e: React.MouseEvent<HTMLDivElement>) => {
-    const value = (e.currentTarget as HTMLDivElement).dataset.value;
-
-    if (value) {
-      navigate.push(value);
-    }
-  };
+  const onClickProject = useCardRoute();
 
   return (
     <>
@@ -32,16 +24,18 @@ function Projects() {
             />
           </div>
           <div tw="py-1 px-2">
-            <p tw="font-bold text-mainBlue pb-2">MARS</p>
+            <p tw="font-bold text-mainBlue pb-2">
+              MARS &#40;실시간 장비 모니터링 시스템&#41;
+            </p>
             <p>
-              <Label txt="React.js" color="blue" />
+              <Label txt="React" color="blue" />
               <Label txt="Typescript" color="green" />
               <Label txt="MobX" color="rosy" />
               <Label txt="Tailwind" color="violet" />
               <Label txt="Javascript" color="yellow" />
             </p>
-            <p tw="pt-4 leading-[1.7rem]">
-              (주)무스마에서 입턴십을 하며 진행한 프로젝트.
+            <p tw="pt-4 leading-[1.6rem]">
+              (주)무스마에서 인턴십을 하며 진행한 프로젝트.
               <br /> 실서비스의 가치를 이해하고 그 가치를 코드로 구현했습니다.
             </p>
           </div>
@@ -58,13 +52,13 @@ function Projects() {
           <div tw="py-1 px-2">
             <p tw="font-bold text-mainBlue pb-2">Account Manage App</p>
             <p>
-              <Label txt="React.js" color="blue" />
+              <Label txt="React" color="blue" />
               <Label txt="Redux-toolkit" color="rosy" />
               <Label txt="Axios" color="yellow" />
               <Label txt="Tailwind" color="violet" />
               <Label txt="Antd" color="violet" />
             </p>
-            <p tw="pt-4 leading-[1.7rem]">
+            <p tw="pt-4 leading-[1.6rem]">
               원티드 프리온보딩 프로그램에 참여하여 진행한 프로젝트.
               <br /> 동료들과 best practice를 찾아가며 진행하였습니다.
             </p>
@@ -83,11 +77,11 @@ function Projects() {
           <div tw="py-1 px-2">
             <p tw="font-bold text-mainBlue pb-2">Tamna BnB</p>
             <p>
-              <Label txt="React.js" color="blue" />
+              <Label txt="React" color="blue" />
               <Label txt="Styled-component" color="violet" />
               <Label txt="HTML" color="yellow" />
             </p>
-            <p tw="pt-4 leading-[1.7rem]">
+            <p tw="pt-4 leading-[1.6rem]">
               제주지역 숙소 예약 및 검색 사이트 입니다.
             </p>
           </div>
@@ -107,11 +101,11 @@ function Projects() {
               Threppa &nbsp;(신발 온라인 쇼핑몰)
             </p>
             <p>
-              <Label txt="React.js" color="blue" />
+              <Label txt="React" color="blue" />
               <Label txt="SCSS" color="violet" />
               <Label txt="HTML" color="yellow" />
             </p>
-            <p tw="pt-4 leading-[1.7rem]">신발 이커머스 사이트 입니다.</p>
+            <p tw="pt-4 leading-[1.6rem]">신발 이커머스 사이트 입니다.</p>
           </div>
         </Card>
       </div>

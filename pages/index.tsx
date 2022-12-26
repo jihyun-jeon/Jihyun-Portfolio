@@ -13,18 +13,18 @@ import { useThemeObserver } from "../hooks/useThemeObserver";
 function Home() {
   const [navNumber, setNavNumber] = useState(1);
 
-  const [explainRef] = useThemeObserver(setNavNumber, 1);
-  const [analysisRef] = useThemeObserver(setNavNumber, 2);
-  const [eventRef] = useThemeObserver(setNavNumber, 3);
+  const [homeRef] = useThemeObserver(setNavNumber, 1);
+  const [aboutRef] = useThemeObserver(setNavNumber, 2);
+  const [projectsRef] = useThemeObserver(setNavNumber, 3);
   const [toyRef] = useThemeObserver(setNavNumber, 4);
 
   return (
-    <>
+    <div>
       <Page id="HOME">
         <Nav navNumber={navNumber} />
         <section>
-          <Scene />
-          {/* <div tw="w-full pt-[10vh] h-[50vh]" /> */}
+          {/* <Scene /> */}
+          <div tw="w-full bg-amber-300 pt-[10vh] h-[50vh]" />
         </section>
         <section tw="mx-auto max-w-6xl flex items-center h-[40%]">
           <h1 tw="font-bold text-6xl leading-relaxed">
@@ -53,28 +53,28 @@ function Home() {
             </div>
           </h1>
         </section>
-        <div ref={explainRef} tw="pt-5" />
+        <div ref={homeRef} tw="pt-5" />
       </Page>
       <main tw="mx-auto max-w-6xl">
-        <Page id="ABOUT" tw="pt-[10vh]  flex flex-col justify-center ">
+        <Page id="ABOUT" tw="pt-[10vh]  flex flex-col justify-center">
+          <div ref={aboutRef} />
           <About />
-          <div ref={analysisRef} />
         </Page>
         <Page id="PROJECTS" tw="pt-[10vh] flex flex-col justify-center">
+          <div ref={projectsRef} />
           <Projects />
-          <div ref={eventRef} />
         </Page>
         <Page id="TOY-PROJECTS" tw="pt-[10vh] flex flex-col justify-start">
-          <ToyProjects />
           <div ref={toyRef} />
+          <ToyProjects />
         </Page>
       </main>
-    </>
+    </div>
   );
 }
 
 export default Home;
 
 const Page = styled.section`
-  ${tw`h-screen`}
+  ${tw`h-screen `}
 `;
