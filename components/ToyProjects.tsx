@@ -4,6 +4,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { Label } from "./Label";
 import Image from "next/image";
+import Card from "../components/Card";
 
 function ToyProjects() {
   const onClickProject = useCardRoute();
@@ -13,7 +14,7 @@ function ToyProjects() {
       <h1 tw="flex justify-center font-semibold text-4xl text-mainBlue">
         Toy Projects
       </h1>
-      <div tw="px-36 grid my-10 gap-8 grid-cols-[1fr_minmax(350px,_1fr)]">
+      <div tw="w-[80%] md:w-[26rem] sm:w-[23rem] my-0 mx-auto pt-14 grid gap-8 grid-cols-[1fr_minmax(350px,_1fr)] md:grid-cols-1 sm:(grid-cols-1 text-sm)">
         <Card data-value="portfolio-toy" onClick={(e) => onClickProject(e)}>
           <div tw="h-full overflow-hidden">
             <Image
@@ -92,22 +93,6 @@ function ToyProjects() {
 }
 
 export default ToyProjects;
-
-const Card = styled.div`
-  ${tw`border-2 border-solid border-neutral-200 rounded-md h-[22rem] grid grid-rows-[60%_40%] bg-gray-100`}
-
-  &:hover {
-    ${tw`cursor-pointer`}
-
-    img {
-      ${tw`scale-110`}
-    }
-  }
-
-  img {
-    ${tw`transform duration-300`}
-  }
-`;
 
 const ToyLabel = styled.span`
   ${tw`px-4 py-1 flex justify-center`}

@@ -6,13 +6,12 @@ import About from "../components/About";
 import Projects from "../components/Projects";
 import ToyProjects from "../components/ToyProjects";
 import Scene from "../3d/Scene";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useThemeObserver } from "../hooks/useThemeObserver";
 
 function Home() {
   const [navNumber, setNavNumber] = useState(1);
-
   const [homeRef] = useThemeObserver(setNavNumber, 1);
   const [aboutRef] = useThemeObserver(setNavNumber, 2);
   const [projectsRef] = useThemeObserver(setNavNumber, 3);
@@ -26,8 +25,8 @@ function Home() {
           {/* <Scene /> */}
           <div tw="w-full bg-amber-300 pt-[10vh] h-[50vh]" />
         </section>
-        <section tw="mx-auto max-w-6xl flex items-center h-[40%]">
-          <h1 tw="font-bold text-6xl leading-relaxed">
+        <section tw="mx-auto max-w-6xl px-10 flex items-center h-[40%]">
+          <h1 tw="font-bold text-6xl leading-relaxed md:text-[3rem] sm:text-[2.3rem]">
             <div>
               <div>
                 안녕하세요!
@@ -76,5 +75,5 @@ function Home() {
 export default Home;
 
 const Page = styled.section`
-  ${tw`h-screen `}
+  ${tw`min-h-screen`}
 `;

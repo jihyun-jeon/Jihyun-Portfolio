@@ -1,24 +1,24 @@
 import tw from "twin.macro";
-import styled from "styled-components";
 import { Label } from "../components/Label";
 import Carousel from "../components/Carousel";
 import Accordion from "../components/Accordion";
 import LinkIcon from "../components/LinkIcon";
 import Growing from "../components/Growing";
-
+import InfoList from "../components/InfoList";
 import { ProjectWrapper } from "../components/ProjectWrapper";
-import React from "react";
 
 const Threppa = () => {
   return (
     <ProjectWrapper>
       <div tw="max-w-3xl mx-auto">
-        <h1 tw="w-full font-bold mb-5 text-3xl flex justify-between">
-          Threppa (신발 온라인 쇼핑몰)
+        <h1 tw="w-full font-bold mb-5 text-3xl flex justify-between sm:(text-2xl flex justify-center)">
+          Threppa &#40;신발 온라인 쇼핑몰&#41;
         </h1>
-        <div tw="my-12">
+        <div tw="my-12 sm:(px-3 text-xs my-10)">
           <InfoList>
-            <li tw="font-bold mb-3">링크</li>
+            <li tw="font-bold mb-3" className="infoTitle">
+              링크
+            </li>
             <li tw="flex">
               <LinkIcon
                 txt="git"
@@ -31,14 +31,18 @@ const Threppa = () => {
             </li>
           </InfoList>
           <InfoList>
-            <li tw="font-bold mb-2">서비스 소개</li>
+            <li tw="font-bold mb-2" className="infoTitle">
+              서비스 소개
+            </li>
             <li>
               이 서비스는 crocs 사이트를 모티브하여 진행한 신발 이커머스 사이트
               입니다.
             </li>
           </InfoList>
           <InfoList>
-            <li tw="font-bold mb-2">사용 스택</li>
+            <li tw="font-bold mb-2" className="infoTitle">
+              사용 스택
+            </li>
             <li>
               <Label txt="HTML" color="violet" />
               <Label txt="SCSS" color="green" />
@@ -46,16 +50,20 @@ const Threppa = () => {
             </li>
           </InfoList>
           <InfoList>
-            <li tw="font-bold mb-2">기간</li>
-            <li>2022. 06. 20 ~ 2022. 06. 30 (2주)</li>
+            <li tw="font-bold mb-2" className="infoTitle">
+              기간
+            </li>
+            <li>2022. 06. 20 ~ 2022. 06. 30 &#40;2주&#41;</li>
           </InfoList>
           <InfoList>
-            <li tw="font-bold mb-2">팀 구성</li>
+            <li tw="font-bold mb-2" className="infoTitle">
+              팀 구성
+            </li>
             <li>프론트엔드 3명, 백엔드 1명</li>
           </InfoList>
         </div>
         <Carousel CarouselData={CarouselData} />
-        <div tw="my-20">
+        <div tw="my-20 sm:(px-3 text-xs)">
           <div tw="max-w-[660px] mx-auto">
             <h1 tw="py-8 text-xl font-bold">개발 내용</h1>
 
@@ -117,22 +125,6 @@ const Threppa = () => {
 };
 
 export default Threppa;
-
-const InfoList = styled.ul`
-  ${tw`grid grid-cols-[100px_minmax(100px,_1fr)] mb-2 leading-6`}
-
-  .InfoTitle {
-    ${tw`font-bold`}
-  }
-
-  .bold {
-    ${tw`px-1 text-mainOrange`}
-  }
-
-  .underLine {
-    ${tw`underline`}
-  }
-`;
 
 const CarouselData = [
   {

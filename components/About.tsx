@@ -23,14 +23,11 @@ const About = () => {
 
   return (
     <>
-      <h1 tw="flex justify-center mb-20 font-semibold text-4xl text-mainBlue">
+      <h1 tw="flex justify-center mb-20 sm:mb-10 font-semibold text-4xl text-mainBlue ">
         About Me
       </h1>
-      <div tw="flex" ref={TargetRef}>
-        <MyImg
-          className={isVisible ? "show" : ""}
-          tw="bg-contain bg-[center_top_-4rem] bg-no-repeat"
-        />
+      <div tw="flex sm:flex-col items-center overflow-hidden" ref={TargetRef}>
+        <MyImg className={isVisible ? "show" : ""} />
         <AboutText className={isVisible ? "show" : ""}>
           <h1>
             저는 <span>기본기가 탄탄한</span> 프론트엔드 개발자
@@ -56,7 +53,7 @@ const About = () => {
             입니다.
           </p>
           <div className="tmi">
-            TMI : <u>#캠핑</u> <u>#서핑</u> <u>#등산</u>
+            TMI : <u>#캠핑</u> <u>#스키</u> <u>#등산</u>
             <u>#ISFJ</u>
             <u>#자바스크립트 챔피언이 되는 그날까지</u>
           </div>
@@ -69,9 +66,10 @@ const About = () => {
 export default About;
 
 const MyImg = styled.div`
-  ${tw`w-1/3 -translate-x-32 opacity-0 transition-all delay-300 duration-500`}
+  ${tw`w-1/3 -translate-x-32 opacity-0 transition-all delay-300 duration-500 bg-[top] bg-no-repeat h-96 sm:(h-48 mb-10)`}
 
   background-image: url(${process.env.BASE_URL}/imgs/jihyunImg.png);
+  background-size: 70%;
 
   &.show {
     ${tw`translate-x-0 opacity-100`}
@@ -79,18 +77,18 @@ const MyImg = styled.div`
 `;
 
 const AboutText = styled.div`
-  ${tw` px-12 w-2/3 translate-x-52 opacity-0  transition-all delay-500 duration-500`}
+  ${tw` px-12 sm:px-0 w-2/3 translate-x-52 opacity-0  transition-all delay-500 duration-500`}
 
   &.show {
     ${tw`translate-x-0 opacity-100`}
   }
 
   h1 {
-    ${tw`text-2xl mb-14`}
+    ${tw`text-2xl mb-14 sm:(text-lg mb-7) md:(text-xl )`}
   }
 
   p {
-    ${tw`text-lg mb-10`}
+    ${tw`text-lg mb-10 sm:text-xs`}
   }
 
   span {
@@ -98,7 +96,7 @@ const AboutText = styled.div`
   }
 
   .tmi {
-    ${tw`pt-10`}
+    ${tw`pt-10 sm:(text-xs pt-0)`}
     u {
       ${tw`mr-2 rounded-lg`}
     }

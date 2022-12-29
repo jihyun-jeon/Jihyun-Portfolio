@@ -12,7 +12,7 @@ const Growing = ({ GrowingData }: { GrowingData: string[][] }) => {
 
   return (
     <StyledGrowing tw="max-w-[660px] mx-auto">
-      <div tw="flex flex-nowrap justify-around gap-12">
+      <div tw="flex flex-nowrap justify-around gap-12 sm:(gap-5)">
         {GrowingData.map((itemData, idx) => {
           return (
             <button

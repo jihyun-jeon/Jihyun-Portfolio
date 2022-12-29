@@ -32,11 +32,15 @@ function Nav({ navNumber }: { navNumber: number }) {
       tw="fixed w-full z-10 bg-mainBgColor"
       className={`${scrolled ? "scroll" : ""} `}
     >
-      <div tw="mx-auto max-w-6xl px-5 flex justify-between bg-mainBgColor">
+      <div tw="mx-auto max-w-6xl px-5 flex justify-between bg-mainBgColor sm:px-2">
         <ul className="menu">
           {menuData.map((data, idx) => (
             <MenuList key={idx} isNow={+navNumber === +(idx + 1)}>
-              <a href={`#${data}`} onClick={OnClickMenu}>
+              <a
+                href={`#${data}`}
+                onClick={OnClickMenu}
+                className={idx === menuData.length - 1 ? "toyMenu" : ""}
+              >
                 {data.includes("-") ? data.replace("-", " ") : data}
               </a>
 
@@ -88,7 +92,7 @@ const Navigation = styled.nav`
 `;
 
 const MenuList = styled.li`
-  ${tw`font-bold text-xl  m-5`}
+  ${tw`font-bold text-xl  m-5 sm:(m-2 text-xs)`}
 
   &:first-of-type {
     ${tw`ml-0`}
@@ -107,7 +111,11 @@ const MenuList = styled.li`
   a {
     ${tw`flex items-center`}
     span {
-      ${tw`ml-2`}
+      ${tw`ml-2 sm:hidden`}
+    }
+
+    &.toyMenu {
+      ${tw`sm:w-[5rem] text-center`}
     }
   }
 `;

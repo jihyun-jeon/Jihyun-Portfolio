@@ -16,6 +16,11 @@ module.exports = {
         "out-expo": " cubic-bezier(0, 1, 0, 1)",
       },
     },
+    screens: {
+      sm: { max: "819px" },
+      md: { min: "820px", max: "1079px" },
+      lg: { min: "1080px" },
+    },
   },
   plugins: [],
 };

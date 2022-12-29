@@ -1,22 +1,24 @@
 import tw from "twin.macro";
-import styled from "styled-components";
 import { Label } from "../components/Label";
 import Carousel from "../components/Carousel";
 import Accordion from "../components/Accordion";
 import LinkIcon from "../components/LinkIcon";
 import Growing from "../components/Growing";
 import { ProjectWrapper } from "../components/ProjectWrapper";
+import InfoList from "../components/InfoList";
 
 const AirbnbApp = () => {
   return (
     <ProjectWrapper>
       <div tw="max-w-3xl mx-auto">
-        <h1 tw="w-full font-bold mb-5 text-3xl flex justify-between">
+        <h1 tw="w-full font-bold mb-5 text-3xl flex justify-between  sm:(text-2xl flex justify-center)">
           Tamna BnB
         </h1>
-        <div tw="my-12">
+        <div tw="my-12 sm:(px-3 text-xs my-10)">
           <InfoList>
-            <li tw="font-bold mb-3">링크</li>
+            <li tw="font-bold mb-3" className="infoTitle">
+              링크
+            </li>
             <li tw="flex">
               <LinkIcon
                 txt="git"
@@ -30,14 +32,18 @@ const AirbnbApp = () => {
             </li>
           </InfoList>
           <InfoList>
-            <li tw="font-bold mb-2">서비스 소개</li>
+            <li tw="font-bold mb-2" className="infoTitle">
+              서비스 소개
+            </li>
             <li>
               이 서비스는 Airbnb 사이트를 모티브하여 진행한 숙소 검색 및 예약
               사이트 입니다.
             </li>
           </InfoList>
           <InfoList>
-            <li tw="font-bold mb-2">사용 스택</li>
+            <li tw="font-bold mb-2" className="infoTitle">
+              사용 스택
+            </li>
             <li>
               <Label txt="React" color="blue" />
               <Label txt="styled-components" color="violet" />
@@ -45,16 +51,20 @@ const AirbnbApp = () => {
             </li>
           </InfoList>
           <InfoList>
-            <li tw="font-bold mb-2">기간</li>
-            <li>2022. 07. 04 ~ 2022. 07. 15 (2주)</li>
+            <li tw="font-bold mb-2" className="infoTitle">
+              기간
+            </li>
+            <li>2022. 07. 04 ~ 2022. 07. 15 &#40;2주&#41;</li>
           </InfoList>
           <InfoList>
-            <li tw="font-bold mb-2">팀 구성</li>
+            <li tw="font-bold mb-2" className="infoTitle">
+              팀 구성
+            </li>
             <li>프론트엔드 4명, 백엔드 1명</li>
           </InfoList>
         </div>
         <Carousel CarouselData={CarouselData} />
-        <div tw="my-20">
+        <div tw="my-20 sm:(px-3 text-xs)">
           <div tw="max-w-[660px] mx-auto">
             <h1 tw="py-8 text-xl font-bold">개발 내용</h1>
 
@@ -136,22 +146,6 @@ const AirbnbApp = () => {
 };
 
 export default AirbnbApp;
-
-const InfoList = styled.ul`
-  ${tw`grid grid-cols-[100px_minmax(100px,_1fr)] mb-2 leading-6`}
-
-  .InfoTitle {
-    ${tw`font-bold`}
-  }
-
-  .bold {
-    ${tw`px-1 text-mainOrange`}
-  }
-
-  .underLine {
-    ${tw`underline`}
-  }
-`;
 
 const CarouselData = [
   {

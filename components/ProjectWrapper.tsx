@@ -19,11 +19,15 @@ export const ProjectWrapper = ({ children }: { children: ReactNode }) => {
 };
 
 const BackBtn = styled.div`
-  ${tw`fixed  top-[55%] left-[3%]`}
+  ${tw`fixed  top-[55%] left-[3%] sm:(hidden) md:(hidden)`}
 
   &:hover {
     * {
       ${tw` text-mainOrange cursor-pointer`}
     }
+  }
+
+  svg {
+    ${tw`sm:w-8 md:w-8`}
   }
 `;

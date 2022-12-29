@@ -1,5 +1,4 @@
 import tw from "twin.macro";
-import styled from "styled-components";
 import { Label } from "../components/Label";
 import Carousel from "../components/Carousel";
 import Accordion from "../components/Accordion";
@@ -9,17 +8,20 @@ import Image from "next/image";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import { ProjectWrapper } from "../components/ProjectWrapper";
+import InfoList from "../components/InfoList";
 
 const Mars = () => {
   return (
     <ProjectWrapper>
       <div tw="max-w-3xl mx-auto">
-        <h1 tw="w-full font-bold mb-5 text-3xl flex justify-between">
+        <h1 tw="w-full font-bold mb-5 text-3xl flex justify-between sm:(text-2xl flex justify-center)">
           MARS &#40;실시간 장비 모니터링 시스템&#41;
         </h1>
-        <div tw="my-12">
+        <div tw="my-12 sm:(px-3 text-xs my-10)">
           <InfoList>
-            <li tw="font-bold mb-3">링크</li>
+            <li tw="font-bold mb-3" className="infoTitle">
+              링크
+            </li>
             <li tw="flex">
               <LinkIcon
                 txt="git"
@@ -33,7 +35,9 @@ const Mars = () => {
             </li>
           </InfoList>
           <InfoList>
-            <li tw="font-bold mb-8">서비스 소개</li>
+            <li tw="font-bold mb-8" className="infoTitle">
+              서비스 소개
+            </li>
             <li>
               이 서비스는 공사현장 관리자를 위한
               <span tw="font-semibold pl-1 text-mainOrange">
@@ -48,7 +52,9 @@ const Mars = () => {
             </li>
           </InfoList>
           <InfoList>
-            <li tw="font-bold mb-2">사용 스택</li>
+            <li tw="font-bold mb-2" className="infoTitle">
+              사용 스택
+            </li>
             <li>
               <Label txt="React" color="blue" />
               <Label txt="Typescript" color="green" />
@@ -58,16 +64,20 @@ const Mars = () => {
             </li>
           </InfoList>
           <InfoList>
-            <li tw="font-bold mb-2">기간</li>
-            <li>2022. 07. 18 ~ 2022. 08. 11 (4주)</li>
+            <li tw="font-bold mb-2" className="infoTitle">
+              기간
+            </li>
+            <li>2022. 07. 18 ~ 2022. 08. 11 &#40;4주&#41;</li>
           </InfoList>
           <InfoList>
-            <li tw="font-bold mb-2">팀 구성</li>
+            <li tw="font-bold mb-2" className="infoTitle">
+              팀 구성
+            </li>
             <li>프론트엔드 2명, 백엔드 2명</li>
           </InfoList>
         </div>
         <Carousel CarouselData={CarouselData} />
-        <div tw="my-20">
+        <div tw="my-20 sm:(px-3 text-xs)">
           <div tw="max-w-[660px] mx-auto">
             <h1 tw="py-8 text-xl font-bold">개발 내용</h1>
 
@@ -135,7 +145,7 @@ const Mars = () => {
                 </div>
                 <Image
                   src={`${process.env.BASE_URL}/imgs/components.png`}
-                  tw="w-full h-96 mt-2"
+                  tw="w-full h-96 mt-2 sm:h-56"
                   alt="componentImg"
                   width={1750}
                   height={980}
@@ -171,22 +181,6 @@ const Mars = () => {
 };
 
 export default Mars;
-
-const InfoList = styled.ul`
-  ${tw`grid grid-cols-[100px_minmax(100px,_1fr)] mb-2 leading-6`}
-
-  .InfoTitle {
-    ${tw`font-bold`}
-  }
-
-  .bold {
-    ${tw`px-1 text-mainOrange`}
-  }
-
-  .underLine {
-    ${tw`underline`}
-  }
-`;
 
 const CarouselData = [
   { title: "home 대쉬보드", url: "https://www.youtube.com/embed/sI7kB4cCKz0" },

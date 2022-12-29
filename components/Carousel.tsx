@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import Slider, { Settings } from "react-slick";
-import "twin.macro";
+import tw from "twin.macro";
 import {
   IoMdArrowDropleftCircle,
   IoMdArrowDroprightCircle,
@@ -23,7 +23,10 @@ const Carousel = ({ CarouselData }: CarouselDataType) => {
       <IconContext.Provider
         value={{ color: "black", size: "30px", className: "arrows" }}
       >
-        <div onClick={() => sliderRef?.current?.slickPrev()} tw="mr-5">
+        <div
+          onClick={() => sliderRef?.current?.slickPrev()}
+          tw="mr-5 sm:hidden"
+        >
           <IoMdArrowDropleftCircle />
         </div>
       </IconContext.Provider>
@@ -33,7 +36,10 @@ const Carousel = ({ CarouselData }: CarouselDataType) => {
       <IconContext.Provider
         value={{ color: "black", size: "30px", className: "arrows" }}
       >
-        <div onClick={() => sliderRef?.current?.slickNext()} tw="ml-5">
+        <div
+          onClick={() => sliderRef?.current?.slickNext()}
+          tw="ml-5 sm:hidden"
+        >
           <IoMdArrowDroprightCircle />
         </div>
       </IconContext.Provider>
@@ -47,31 +53,30 @@ const Carousel = ({ CarouselData }: CarouselDataType) => {
       <Slider {...settings} ref={sliderRef}>
         {CarouselData.map((slideItemData, idx) => (
           <div className="slideItem" key={slideItemData.title}>
-            <h1 tw="h-12 flex items-center text-xl font-bold">
+            <h1 tw="h-12 flex items-center text-xl font-bold sm:text-base">
               📍 {slideItemData.title}
             </h1>
             {slideItemData.url.includes("imgs") ? (
               <div
+                className="gif"
                 style={{
                   backgroundImage: `url(${slideItemData.url})`,
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "contain",
                   backgroundPosition: "center",
-                  width: "1200px",
-                  height: "750px",
                   margin: "0 auto",
                 }}
               />
             ) : (
-              <iframe
-                width="1200px"
-                height="600px"
-                src={slideItemData.url}
-                title="YouTube video player"
-                frameBorder="1"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+              <div tw="flex justify-center">
+                <iframe
+                  className="youtube"
+                  src={slideItemData.url}
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
             )}
           </div>
         ))}
@@ -81,52 +86,45 @@ const Carousel = ({ CarouselData }: CarouselDataType) => {
 };
 
 const SliderWrapper = styled.div`
+  .youtube {
+    ${tw`w-[1200px] h-[600px] md:(w-[700px] h-[400px] ) sm:(w-[370px] h-[300px] my-0 mx-auto)`}
+  }
+
+  .gif {
+    ${tw`w-[1200px] h-[600px] md:(w-[700px] h-[400px] ) sm:(w-[380px] h-[210px])`}
+  }
+
   .arrows {
-    cursor: pointer;
+    ${tw`cursor-pointer`}
   }
 
   .slick-slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    position: relative;
+    ${tw`flex items-center justify-center w-screen relative px-10`}
     left: calc(-50vw + 50%);
   }
 
   .slick-list {
-    width: 1200px;
-    padding-bottom: 20px;
-    overflow: hidden;
+    ${tw`w-[1200px] pb-5 overflow-hidden`}
   }
 
   .slick-list .slick-track {
-    display: flex;
-    width: 100%;
-    height: 100%;
+    ${tw`flex w-full h-full`}
   }
 
   .slick-dots {
-    position: absolute;
-    bottom: -30px;
+    ${tw`absolute bottom-[-30px]`}
   }
 
   .slick-dots li {
-    display: inline-block;
+    ${tw`inline-block`}
   }
 
   .slick-dots li button {
-    border-radius: 50%;
-    background-color: lightgray;
-    border: 1px solid lightgray;
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
-    color: transparent;
+    ${tw`rounded-[50%] bg-gray-300 border-[1px] border-gray-300 mr-2.5 w-5 h-5 text-transparent`}
   }
 
   .slick-dots li.slick-active button {
-    background-color: orange;
+    ${tw`bg-orange-400`}
   }
 `;
 

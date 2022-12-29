@@ -1,9 +1,9 @@
 import React from "react";
 import { useCardRoute } from "../hooks/useCardRoute";
 import tw from "twin.macro";
-import styled from "styled-components";
 import { Label } from "./Label";
 import Image from "next/image";
+import Card from "../components/Card";
 
 function Projects() {
   const onClickProject = useCardRoute();
@@ -13,13 +13,13 @@ function Projects() {
       <h1 tw="flex justify-center font-semibold text-4xl text-mainBlue">
         Projects
       </h1>
-      <div tw="px-36 grid my-10 gap-8 grid-cols-[1fr_minmax(350px,_1fr)]">
+      <div tw="w-[80%] md:w-[26rem] sm:w-[22rem] my-0 mx-auto pt-14 grid gap-8 grid-cols-[1fr_minmax(350px,_1fr)]  md:grid-cols-1 sm:(grid-cols-1 text-sm)">
         <Card data-value="mars" onClick={onClickProject}>
           <div tw="h-full overflow-hidden">
             <Image
               src={`${process.env.BASE_URL}/imgs/musmaBg.png`}
               alt="mars이미지"
-              width={430}
+              width={440}
               height={300}
             />
           </div>
@@ -45,7 +45,7 @@ function Projects() {
             <Image
               src={`${process.env.BASE_URL}/imgs/accountBg.png`}
               alt="accountApp"
-              width={430}
+              width={440}
               height={300}
             />
           </div>
@@ -70,7 +70,7 @@ function Projects() {
             <Image
               src={`${process.env.BASE_URL}/imgs/airbnbBg.png`}
               alt="airbnb"
-              width={430}
+              width={440}
               height={300}
             />
           </div>
@@ -92,7 +92,7 @@ function Projects() {
             <Image
               src={`${process.env.BASE_URL}/imgs/threppaBg.png`}
               alt="threppa"
-              width={430}
+              width={440}
               height={300}
             />
           </div>
@@ -114,19 +114,3 @@ function Projects() {
 }
 
 export default Projects;
-
-const Card = styled.div`
-  ${tw`border-2 border-solid border-neutral-200 rounded-md h-[21rem] grid grid-rows-[60%_40%] bg-gray-100`}
-
-  &:hover {
-    ${tw`cursor-pointer`}
-
-    img {
-      ${tw`scale-110`}
-    }
-  }
-
-  img {
-    ${tw`transform duration-300`}
-  }
-`;
