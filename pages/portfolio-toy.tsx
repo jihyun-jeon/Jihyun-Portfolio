@@ -68,63 +68,73 @@ const PortfolioToy = () => {
           <div tw="max-w-[660px] mx-auto">
             <h1 tw="py-8 text-xl font-bold">개발 내용</h1>
 
-            <Accordion CarouselTitle={"1. lazyload를 활용한 성능 최적화"}>
+            <Accordion CarouselTitle={"1. lazyload를 활용한 로딩속도 향상"}>
               <div>
                 <div tw="mb-6">
-                  이 서비스는 해외 공사 현장에서도 사용될 것을 고려했기 때문에,
-                  <br /> 전 세계의 지도를 제공하는 Google Maps Javascript API를
-                  사용했습니다.
-                </div>
-
-                <div tw="mb-6">
-                  <p tw="font-bold">📍 도면을 지도 배경으로 커스텀</p>
-                  <p tw="ml-2 mt-1">
-                    <span> - </span>
-                    실제 공사장 도면을 지도 배경 이미지로 활용하여 장비의 위치를
-                    파악할 수 있도록 하였습니다.
-                  </p>
-                </div>
-
-                <div tw="mb-6">
-                  <p tw="font-bold"> 📍 Marker를 이용한 장비의 가동상황 표시</p>
-                  <p tw="ml-2 mt-1">
-                    <span> - </span>
-                    장비별 아이콘을 Marker로 표시하고, 장비 가동 상태에 따라
-                    아이콘 색상이 변경됩니다.
-                  </p>
-                </div>
-                <div tw="mb-6">
-                  <p tw="font-bold">
-                    📍 Cluster와 Overlay를 활용한 공사현장 표시
-                  </p>
-                  <p tw="ml-2 mt-1">
-                    <span> - </span>
-                    지도 축소 시 Cluster로 마커가 하나로 모이고, 마커 클릭 시
-                    Overlay에 장비 이름이 표시되어 <br />
-                    관리자가 공사현장을 한눈에 파악할 수 있도록 하였습니다.
-                  </p>
+                  Carousel를 넘길때 다음 슬라이드의 동영상을 로드 하는데 시간이
+                  오래 걸려 빈 화면인 상태에서 기다려야 했습니다.
+                  <br />
+                  <br />
+                  슬라이드 이동시
+                  <span tw="font-semibold pl-1 text-mainOrange">
+                    동영상 로드 속도를 개선
+                  </span>
+                  하기 위해 react-slick 기능 중 lazyload 기능을 활용하였습니다.
+                  <br />
+                  <br />
+                  lazyload 속성 중 anticipated 값을 적용하여 슬라이드를 넘기기
+                  전에 미리 이후 슬라이드 동영상을 로드해주어 로딩 속도를 개선할
+                  수 있었습니다.
                 </div>
               </div>
             </Accordion>
-            <Accordion CarouselTitle={"2. IntersectionObserver"}>
+            <Accordion
+              CarouselTitle={"2. IntersectionObserver을 활용한 성능 최적화"}
+            >
               <div tw="mb-6">
-                Context API를 이용하여 toast 메시지를 전역으로 두어, 다른 팀원이
-                구현하는 페이지에서도 같이 사용할 수 있도록 하였습니다.
+                페이지 스크롤시 특정 위치에 따라 Nav메뉴에 underline 처리를 하기
+                위해 <br />
+                IntersectionObserver을 활용하여 관찰 요소를 지정하는 방식으로
+                구현하였습니다.
+                <br /> <br />
+                이를 통해 document에 직접 scroll 이벤트를 바인딩 하던 방식에
+                비해 더 성능을 최적화 할 수 있었습니다.
+                <br />
+                <br />
+                <span tw="font-semibold pl-1 text-mainOrange">
+                  scroll 이벤트가 불필요하게 발생
+                </span>
+                하는 현상을 막을 수 있고,
+                <br />
+                getBoundingClientRect를 호출하지 않아
+                <span tw="font-semibold pl-1 text-mainOrange">
+                  리플로우 현상을 막을 수
+                </span>
+                &nbsp; 있어 <br />
+                사이트의 성능을 좀 더 개선시킬 수 있었습니다.
               </div>
             </Accordion>
-            <Accordion CarouselTitle={"3. 재사용 가능한 컴포넌트 구상"}>
+            <Accordion CarouselTitle={"3. 반응형 사이트 구현"}>
               <div tw="mb-6">
                 <div>
-                  반복되는 input box와 select box를 공통 컴포넌트로 분리하여
-                  재사용하였습니다. <br />
-                  <br />
-                  또한 요소마다 조금씩 다른 style 처리를 해야 하는 경우가
-                  있었는데
-                  <br />
-                  이는 props로 독립적인 style 값을 주어 해결하였습니다.
-                  <br />
-                  <br />이 결과 한 컴포넌트를 사용해도 상황에 맞는 별도의 UI를
-                  그릴 수 있었습니다.
+                  PC, Tablet, Mobile 환경에 대응할 수 있는 반응형 사이트로
+                  구현하였습니다.
+                  <br /> 또한 PC의 경우 모니터 화면이 늘어나도 컨텐츠가 중앙에
+                  유지되게끔 구현하였습니다.
+                  <br /> <br />
+                  처음엔 반응형 사이트를 염두하지 않고 시작한터라, 나중에 반응형
+                  구현시 브라우저 사이즈가 줄어들면
+                  <span tw="font-semibold pl-1 text-mainOrange">
+                    컨텐츠의 가로 길이가 px로 고정되있어서 뷰포트 밖을 벗어나는
+                    문제
+                  </span>
+                  가 있었습니다.
+                  <br /> <br /> 이를 해결하기 위해 컨텐츠의 가로 사이즈를
+                  브라우저 기준
+                  <span tw="font-semibold pl-1 text-mainOrange">
+                    상대 사이즈인 %로
+                  </span>
+                  수정하여 해결하였습니다.
                 </div>
               </div>
             </Accordion>
@@ -146,14 +156,14 @@ export default PortfolioToy;
 const GrowingData = [
   [
     "SSR 경험",
-    "server에서 만든  와 client에서 만들어지는 dom tree가 달라서 React Hydration Error 오류가 났습니다. \n 이 에러를 해결하면서 server에서 만드는 dom tree의 최상위 객체는 window가 아니기 때문에 ssr 또는 csr 에서만 렌더링되는 로직은 제거해야 한다는 것을 알았습니다.",
+    "server에서 pre-render한 tree와 브라우저에서 초기 render한 tree가 달라서 \n <b>React Hydration Error 오류 </b>가 났습니다. \n<br/> ul태그 없이 li태그를 써서 발생한 문제였고 html 요소 순서를 올바르게 수정하여 해결하였습니다. \n<br/> 이 에러를 해결하면서 hydration을 통해 server에서 내려준 HTML dom을 \nclient에서  <b>매칭하며 렌더링 </b>하고 이후  <b>이벤트 핸들러를 바인딩 </b>하게 되는 원리를 알게되었습니다.",
   ],
   [
     "사이트 성능 측정 경험",
-    "MobX를 사용하는데 있어서 다른 팀원과 각자 추구하는 방식이 달랐습니다.\n<br/>때문에 각자가 선호하는 방법을 서로에게 설명하는 시간을 가졌고 또한 구글링을 통해 두 방식은 테스트 할 때에 차이를 보인다는 것을 알아냈습니다.\n이 프로젝트는 테스트는 진행하지 않았고 다른 팀원이 상태 관리 셋팅을 담당하기로 했기 때문에 팀원을 믿고 팀원의 결정대로 방식을 결정하였습니다.\n<br/>저는 상대와 의견 충돌이 있을 때 <b>동료의 의견이 옳을 수 있다는 열린 마음</b>을 갖고\n동료와의 <b>충분한 상의</b>를 통해 원만히 해결해 나갈 것입니다.",
-  ],
-  [
-    "에러 해결기\n(비동기 처리 순서 보장)",
-    "수정된 데이터를 put요청 후 다시 get요청을 하여 최신 데이터로 store값을 갱신해줘야 했습니다. \n<br/>그러나 store 업데이트 후 자동으로 리렌더링이 안되고 새로고침을 해야지만 업데이트 된 내용이 반영이 되는 현상이 발생하였습니다.\n 여러 시도 끝에 api 호출하는 코드에서 응답 값을 콘솔로 찍어보니 put요청과 get요청의 순서가 보장되지 않는 것을 알게 되었습니다. \n<br/>때문에 <b>async구문을 사용</b>하여 두 api호출의 순서를 보장하도록 하였고,\n 나아가 fetch의 then메서드에서 <b>중첩 fetch</b>를 반환하는 식으로 비동기 처리의 순서를 보장할 수도 있다는 것까지 알게 되었습니다.",
+    "성능을 측정해보니 초기 화면 로딩시 다운받아야 할 이미지가 많아서 로딩이 지연되었습니다. 초기 렌더링 성능 향상을 위해 화면에 바로 보여지지 않는 이미지에 loading=lazy 값을 주어 성능을 개선시켰습니다.",
   ],
 ];
+
+// react로 했을때와 nextjs로 했을때의 초기 렌더링 속도 비교
+// 초반에 화면에 보여지지 않는 이미지들은 lazyload 처리하여 초기 렌더링 속도 향상 고려(0.0003초 차이가 나서 그냥 lazyload 처리 하지 않음)
+// scroll이벤트로 요소 감지 VS intersectionObserver로 감지 (속도)성능 비교
