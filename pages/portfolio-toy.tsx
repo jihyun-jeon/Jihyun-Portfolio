@@ -67,27 +67,31 @@ const PortfolioToy = () => {
         <div tw="sm:(px-3 text-xs)">
           <div tw="max-w-[660px] mx-auto">
             <h1 tw="py-8 text-xl font-bold">개발 내용</h1>
-
-            <Accordion CarouselTitle={"1. lazyload를 활용한 로딩속도 향상"}>
-              <div>
-                <div tw="mb-6">
-                  Carousel를 넘길때 다음 슬라이드의 동영상을 로드 하는데 시간이
-                  오래 걸려 빈 화면인 상태에서 기다려야 했습니다.
-                  <br />
-                  <br />
-                  슬라이드 이동시
+            <Accordion CarouselTitle={"1. 반응형 사이트 구현"}>
+              <div tw="mb-6">
+                <div>
+                  PC, Tablet, Mobile 환경에 대응할 수 있는 반응형 사이트로
+                  구현하였습니다.
+                  <br /> 또한 PC의 경우 모니터 화면이 늘어나도 컨텐츠가 중앙에
+                  유지되게끔 구현하였습니다.
+                  <br /> <br />
+                  처음엔 반응형 사이트를 염두하지 않고 시작한터라, 나중에 반응형
+                  구현시 브라우저 사이즈가 줄어들면
                   <span tw="font-semibold pl-1 text-mainOrange">
-                    동영상 로드 속도를 개선
+                    컨텐츠의 가로 길이가 px로 고정되있어서 뷰포트 밖을 벗어나는
+                    문제
                   </span>
-                  하기 위해 react-slick 기능 중 lazyload 기능을 활용하였습니다.
-                  <br />
-                  <br />
-                  lazyload 속성 중 anticipated 값을 적용하여 슬라이드를 넘기기
-                  전에 미리 이후 슬라이드 동영상을 로드해주어 로딩 속도를 개선할
-                  수 있었습니다.
+                  가 있었습니다.
+                  <br /> <br /> 이를 해결하기 위해 컨텐츠의 가로 사이즈를
+                  브라우저 기준
+                  <span tw="font-semibold pl-1 text-mainOrange">
+                    상대 사이즈인 %로
+                  </span>
+                  수정하여 해결하였습니다.
                 </div>
               </div>
             </Accordion>
+
             <Accordion
               CarouselTitle={"2. IntersectionObserver을 활용한 성능 최적화"}
             >
@@ -114,27 +118,23 @@ const PortfolioToy = () => {
                 사이트의 성능을 좀 더 개선시킬 수 있었습니다.
               </div>
             </Accordion>
-            <Accordion CarouselTitle={"3. 반응형 사이트 구현"}>
-              <div tw="mb-6">
-                <div>
-                  PC, Tablet, Mobile 환경에 대응할 수 있는 반응형 사이트로
-                  구현하였습니다.
-                  <br /> 또한 PC의 경우 모니터 화면이 늘어나도 컨텐츠가 중앙에
-                  유지되게끔 구현하였습니다.
-                  <br /> <br />
-                  처음엔 반응형 사이트를 염두하지 않고 시작한터라, 나중에 반응형
-                  구현시 브라우저 사이즈가 줄어들면
+            <Accordion CarouselTitle={"3. lazyload를 활용한 로딩속도 향상"}>
+              <div>
+                <div tw="mb-6">
+                  Carousel를 넘길때 다음 슬라이드의 동영상을 로드 하는데 시간이
+                  오래 걸려 빈 화면인 상태에서 기다려야 했습니다.
+                  <br />
+                  <br />
+                  슬라이드 이동시
                   <span tw="font-semibold pl-1 text-mainOrange">
-                    컨텐츠의 가로 길이가 px로 고정되있어서 뷰포트 밖을 벗어나는
-                    문제
+                    동영상 로드 속도를 개선
                   </span>
-                  가 있었습니다.
-                  <br /> <br /> 이를 해결하기 위해 컨텐츠의 가로 사이즈를
-                  브라우저 기준
-                  <span tw="font-semibold pl-1 text-mainOrange">
-                    상대 사이즈인 %로
-                  </span>
-                  수정하여 해결하였습니다.
+                  하기 위해 react-slick 기능 중 lazyload 기능을 활용하였습니다.
+                  <br />
+                  <br />
+                  lazyload 속성 중 anticipated 값을 적용하여 슬라이드를 넘기기
+                  전에 미리 이후 슬라이드 동영상을 로드해주어 로딩 속도를 개선할
+                  수 있었습니다.
                 </div>
               </div>
             </Accordion>
@@ -160,7 +160,7 @@ const GrowingData = [
   ],
   [
     "사이트 성능 측정 경험",
-    "성능을 측정해보니 초기 화면 로딩시 다운받아야 할 이미지가 많아서 로딩이 지연되었습니다. 초기 렌더링 성능 향상을 위해 화면에 바로 보여지지 않는 이미지에 loading=lazy 값을 주어 성능을 개선시켰습니다.",
+    "성능을 측정해보며 FCP, LCP 등 성능 측정 지표를 자세히 공부할 수 있었습니다. \n<br/> 성능을 측정해보니 초기 화면 로딩시 다운받아야 할 이미지가 많아서 로딩이 지연되었습니다. \n<br/>초기 렌더링 성능 향상을 위해 화면에 바로 보여지지 않는 이미지에 loading=lazy 값을 주어 성능을 개선할 수 있다는 것을 알았습니다.",
   ],
 ];
 

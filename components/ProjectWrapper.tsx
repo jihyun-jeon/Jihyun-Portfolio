@@ -19,7 +19,7 @@ export const ProjectWrapper = ({ children }: { children: ReactNode }) => {
 };
 
 const BackBtn = styled.div`
-  ${tw`fixed  top-[55%] left-[3%] sm:(hidden) md:(hidden)`}
+  ${tw`fixed  top-[45%] left-[3%] sm:(hidden) md:(hidden)`}
 
   &:hover {
     * {
